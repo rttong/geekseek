@@ -9,6 +9,7 @@ class CreateVolunteers < ActiveRecord::Migration
     	t.string :availability
     	t.string :location
       t.string :portfolio_links
+      t.references :user
     end
   end
 end

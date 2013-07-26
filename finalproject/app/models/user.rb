@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :userable_type, :userable_id
 
-  belongs_to :userable, polymorphic: true
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me
+
 
 end
