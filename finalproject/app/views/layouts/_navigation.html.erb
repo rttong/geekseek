@@ -1,7 +1,36 @@
+<<<<<<< HEAD
 <div id="header">
 
 <div id="logo">
 </div>
 
 
+=======
+<div id="header_wrapper">
+
+<ul>
+	<div id="logo">
+    <li>
+		<%= link_to "Develop For Good", root_path, :class => "brand" %>
+	</div>
+
+<div id="menu">
+	<% if user_signed_in? %>
+  	<li>
+  		<%= link_to 'View Profile', user_path(current_user) %>
+  	</li>
+  	<li>
+  		<%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>
+  	</li>
+	<% else %>
+  	<li>
+  		<%= link_to 'Sign Up', new_user_registration_path %>
+  	</li>
+  	<li>
+  		<%= link_to 'Sign In', new_user_session_path %>
+  	</li>
+	<% end %>
+</ul>
+</div>
+>>>>>>> master
 </div>
