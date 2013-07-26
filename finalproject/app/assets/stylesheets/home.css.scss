@@ -1,5 +1,5 @@
 body{
-  margin: 0;
+  margin: 0
 }
 
 #header_wrapper {
@@ -19,6 +19,12 @@ body{
     #menu{
       width:50%;
       float:right;
+      
+        ul{
+          background-color: yellow;
+          list-style: none;
+          display:inline;
+        }
     }
   }
 }
