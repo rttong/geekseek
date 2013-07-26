@@ -10,10 +10,6 @@ $(document).ready(function(){
   });
 
   //ORGANIZATIONS
-  $('#sign_in_button_org').click( function(e) {
-    e.preventDefault();
-    $('#sign_in_form_org').slideDown();
-  });
   $('#sign_up_button_org').click( function(e) {
     e.preventDefault();
     $('#sign_up_form_org').slideDown();
