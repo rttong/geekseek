@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+body{
+  margin: 0;
+}
+
+#header_wrapper {
+  width:100%;
+  height: 50px;
+  // delete height once done
+  position:fixed;
+
+  #header_container {
+    margin: 0 auto;
+    width:960px;
+
+    #logo{
+      width:50%;
+      float:left;
+    }
+    #menu{
+      width:50%;
+      float:right;
+    }
+  }
+}
+
+#content_wrapper {
+  width:100%;
+  #content_container{
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+#footer_wrapper {
+  width:100%;
+  position: fixed;
+}
+
+
+
+=======
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+>>>>>>> 9cdba1e50be92d902269c8acea702d61ef351b92
