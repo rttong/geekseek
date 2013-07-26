@@ -26,7 +26,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Token authenticatable
       # t.string :authentication_token
 
-      t.references :userable, polymorphic: true
       t.timestamps
     end
 
