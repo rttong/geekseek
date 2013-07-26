@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
   <div id="header_wrapper">
     <div id="header_container">
       <div id="logo">
@@ -35,6 +36,19 @@
   <p class="alert"><%= alert %></p>
 
   <%= yield %>
+=======
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<%= yield %>
+>>>>>>> 9cdba1e50be92d902269c8acea702d61ef351b92
+
+<div id="user_nav">
+	<% if user_signed_in? %>
+		Signed in as <%= current_user.email %>. Not you?
+		
+	<% end %>
+</div>
 
 </body>
 
