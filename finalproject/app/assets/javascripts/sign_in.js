@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $('#sign_in_button').click( function() {   
-        // console.log('wtf!');
+        console.log('wtf!');
         // e.preventDefault();
         // $('#popup_box').find('input').removeAttr('type');
-        $('#popup_box').fadeIn();
+        $('#sign_in_form').fadeIn();
     });
 });
         
