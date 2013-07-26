@@ -11,9 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20130726185715) do
-
+ActiveRecord::Schema.define(:version => 20130726191441) do
 
   create_table "organizations", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -28,11 +26,17 @@ ActiveRecord::Schema.define(:version => 20130726185715) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "org_name"
+    t.string   "cause"
+    t.string   "mission"
+    t.string   "description"
+    t.integer  "year_founded"
+    t.integer  "size"
+    t.string   "url"
   end
 
   add_index "organizations", ["email"], :name => "index_organizations_on_email", :unique => true
   add_index "organizations", ["reset_password_token"], :name => "index_organizations_on_reset_password_token", :unique => true
-
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
