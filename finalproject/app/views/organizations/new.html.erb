@@ -1,5 +1,5 @@
-<h2>Edit Organization Profile</h2>
-<div id="edit_org_prof">
+<h2>Create Organization Profile</h2>
+<div id="create_org_prof">
 <%= simple_form_for current_user.organization do |f| %>
 <%= f.input :org_name %>
 <%= f.input :location %>
@@ -10,6 +10,6 @@
 <%= f.number_field :size %>
 <%= f.url_field :url %>
 <%= f.input :avatar %>
-<%= f.button :update %>
+<%= f.button :submit %>
 <% end %>
 </div>

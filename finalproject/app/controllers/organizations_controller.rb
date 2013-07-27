@@ -16,9 +16,16 @@ class OrganizationsController < ApplicationController
 
   def create
     @organization = Organization.create(params[:organization])
-    @organization.tags << tags
-    redirect_to organization_path(@organization)
   end
 
+  def edit
+    @user = User.find(params[:id])
+    @organization = @user.organization
+  end
+
+  def update
+    @organization = Organization.find(params[:id])
+    @organization.update_attributes(params[:organization])
+  end
 
 end

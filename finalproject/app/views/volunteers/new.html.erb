@@ -1,5 +1,5 @@
-<h2>Edit Volunteer Profile</h2>
-<div id="edit_vol_prof">
+<h2>Create Volunteer Profile</h2>
+<div id="create_vol_prof">
 <%= simple_form_for current_user.volunteer do |f| %>
 <%= f.input :first_name %>
 <%= f.input :last_name %>
@@ -9,9 +9,10 @@
 <%= f.input :availability %>
 <%= f.input :location %>
 <%= f.input :portfolio_links %>
-<%= f.button :update %>
+<%= f.button :submit %>
 <% end %>
 </div>
+
 
 
 
