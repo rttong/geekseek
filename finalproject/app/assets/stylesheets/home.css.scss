@@ -68,11 +68,15 @@ body {
   width: 860px;
   background-color: black;
   margin:0 auto;
-  .sign_up{
+  .field{
     display: inline-block;
-    width:400px;
-    margin: 2px;
   }
+}
+
+#signup_form_v, #signup_form_org{
+  display:none;
+  width:400px;
+  margin: 2px;
 }
 
 #inner_content{

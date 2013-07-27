@@ -1,13 +1,20 @@
     <div id="image_carousel">
       carousel
     </div>
+
     <div id="sign_up">
+      
+      <div class="field">
+      <%= link_to "Sign up", '#', id: 'signup_v' %> 
+      </div>
+
       <div class="sign_up">
-        <%= link_to "Sign up", '#', id: 'signup_v' %> 
         <%= render "devise/registrations/signup_v" %>
       </div>
+      <div class="field">
+      <%= link_to "Sign up", '#', id: 'signup_org' %> 
+      </div>
       <div class="sign_up">
-        <%= link_to "Sign up", '#', id: 'signup_org' %> 
         <%= render "devise/registrations/signup_org" %>
       </div>
     </div>
