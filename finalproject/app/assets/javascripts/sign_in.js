@@ -2,7 +2,7 @@ $(document).ready(function(){
   //USERS
   $('#sign_in_button').click(function(e) {
     e.preventDefault();
-    $('#sign_in_form').slideDown();
+    $('#sign_in_form').toggle();
   });
 
   // Taking this out since sign up is two forms now.
