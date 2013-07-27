@@ -11,7 +11,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726232129) do
+ActiveRecord::Schema.define(:version => 20130727014434) do
+
+  create_table "categories", :force => true do |t|
+    t.string "website_redesign"
+    t.string "website_creation"
+    t.string "branding"
+    t.string "database_creation"
+    t.string "graphic_design"
+    t.string "other"
+  end
+
+  create_table "causes", :force => true do |t|
+    t.string "adult_ed"
+    t.string "job_readiness"
+    t.string "special_needs"
+    t.string "animals"
+    t.string "childrens_ed"
+    t.string "environment"
+    t.string "health"
+    t.string "hunger"
+    t.string "seniors"
+    t.string "revitilization"
+    t.string "veterans"
+    t.string "homeless"
+    t.string "lgbt"
+    t.string "other"
+  end
 
   create_table "organizations", :force => true do |t|
     t.string  "org_name"
@@ -22,6 +48,22 @@ ActiveRecord::Schema.define(:version => 20130726232129) do
     t.integer "year_founded"
     t.integer "size"
     t.string  "url"
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string  "title"
+    t.string  "summary"
+    t.date    "target_date"
+    t.integer "organizations_id"
+  end
+
+  create_table "skills", :force => true do |t|
+    t.string "web_designer"
+    t.string "web_developer"
+    t.string "technical_training"
+    t.string "graphic_design"
+    t.string "marketing"
+    t.string "other"
   end
 
   create_table "users", :force => true do |t|

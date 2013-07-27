@@ -1,8 +1,8 @@
 class CreateSkillsVolunteers < ActiveRecord::Migration
    def create
     create_table :skills_volunteers do |t|
-      t.references :skills
-      t.references :volunteers
+      t.belongs_to :skill
+      t.belongs_to :volunteer
     end
   end
 end

@@ -1,6 +1,6 @@
 class CreateCategories < ActiveRecord::Migration
   def change
-    create_table :skills do |t|
+    create_table :categories do |t|
       t.string :website_redesign
       t.string :website_creation
       t.string :branding
