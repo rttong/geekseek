@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   after_create :generate_volunteer_or_organization
 
-  def generate_user_or_organization
+  def generate_volunteer_or_organization
     if volunteer?
       self.create_volunteer
     else
