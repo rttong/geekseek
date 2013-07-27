@@ -56,6 +56,32 @@ body {
   }
 }
 
+#image_carousel{
+  height: 250px;
+  width: 860px;
+  background-color: #444;
+  margin: 0 auto;
+}
+
+#sign_up {
+  height: 200px;
+  width: 860px;
+  background-color: black;
+  margin:0 auto;
+  .sign_up{
+    display: inline-block;
+    width:400px;
+    margin: 2px;
+  }
+}
+
+#inner_content{
+  height:200px;
+  width:860px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
 #footer_wrapper {
   width: 100%;
   overflow: hidden;
