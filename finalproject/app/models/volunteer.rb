@@ -1,5 +1,5 @@
 class Volunteer < ActiveRecord::Base
-  # attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :userable_type, :userable_id
+  attr_accessible :first_name, :last_name, :skills, :job_history, :phone, :availability, :location, :portfolio_links, :user_id
   has_many :skills
   has_many :projects
   belongs_to :user

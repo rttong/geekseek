@@ -4,7 +4,7 @@ class CreateProjects < ActiveRecord::Migration
       t.string :title
       t.string :summary
       t.date :target_date
-      t.references :organizations
+      t.belongs_to :organizations
     end
   end
 end
