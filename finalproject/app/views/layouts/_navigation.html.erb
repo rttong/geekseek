@@ -3,8 +3,8 @@
 </div>
 
 <div id="menu">
-
-  <ul>
+  <% if user_signed_in? %>
+    <ul>
     <% if current_user.profile_type == "organization" %>
     <li><%= link_to 'View Dashboard', organization_path(current_user)  %></li>
     <% end %>
@@ -12,8 +12,7 @@
     <% if current_user.profile_type == "volunteer" %>
     <li><%= link_to 'View Dashboard', volunteer_path(current_user)  %></li>
     <% end %>
-
- <% if user_signed_in? %>
+ 
     <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
   </ul>
   <% else %>
@@ -24,4 +23,5 @@
     </li>
   </ul>
   <% end %>
+
 </div>
