@@ -6,6 +6,7 @@ class VolunteersController < ApplicationController
   end
 
   def show
-    redirect_to 'volunteer/show'
+    @user = User.find(params[:id])
+    @volunteer = @user.volunteer
   end
 end
