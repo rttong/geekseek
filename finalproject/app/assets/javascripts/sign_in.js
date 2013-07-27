@@ -5,15 +5,10 @@ $(document).ready(function(){
     $('#sign_in_form').toggle();
   });
 
-  // Taking this out since sign up is two forms now.
-
-  // $('#sign_up_button').click( function(e) {
-  //   e.preventDefault();
-  //   $('#sign_up_form').slideDown();
-  // });
-  // $('#sign_up_button_org').click( function(e) {
-  //   e.preventDefault();
-  //   $('#sign_up_form_org').slideDown();
-  // }); 
+  $('#signup_v').click( function(e) {
+    e.preventDefault();
+    $('#signup_v').slideDown();
+  });
+   
 });
 

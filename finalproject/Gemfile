@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'client_side_validations'
 gem 'devise'
 gem 'binding_of_caller'
+gem 'carrierwave'
 
 
 # Gems used only for assets and not required
