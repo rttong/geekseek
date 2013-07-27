@@ -1,13 +1,13 @@
 <div id="org_menu">
   <ul>
-    <li>Profile </li>
-    <li>Project Requests Posted</li>
-    <li>Feedback</li>
+    <li><%= link_to "Photo" %></li>
+    <li><%= link_to "Profile" %> </li>
+    <li><%= link_to "Project Requests" %></li>
+    <li><%= link_to "Feedback" %></li>
   </ul>
 
   <%= link_to 'Edit Account', edit_organization_path %>
 
-  <%= link_to 'Change Email/Password', edit_user_registration_path %>
 </div>
 
 <div id="org_content">
