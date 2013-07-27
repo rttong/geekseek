@@ -3,9 +3,11 @@
   <ul>
     <li>Name: <%= @organization.org_name %></li>
     <li>Year Founded: <%= @organization.year_founded %></li>
-    <li>Org size: <%= @organization.size %></li>
+    <li>Org Size: <%= @organization.size %></li>
     <li>Website: <%= @organization.url %></li>
+    <% @organization.cause each do |cause| %>
     <li>Causes: <%= @organization.cause %></li>
+    <% end %>
     <li>Mission: <%= @organization.mission %></li>
     <li>Program Description: <%= @organization.description %></li>
   </ul>
