@@ -11,7 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728202033) do
+
+ActiveRecord::Schema.define(:version => 20130728225058) do
 
   create_table "categories", :force => true do |t|
     t.string "website_redesign"
@@ -28,20 +29,7 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "causes", :force => true do |t|
-    t.boolean "adult_ed",       :default => false
-    t.boolean "job_readiness",  :default => false
-    t.boolean "special_needs",  :default => false
-    t.boolean "animals",        :default => false
-    t.boolean "childrens_ed",   :default => false
-    t.boolean "environment",    :default => false
-    t.boolean "health",         :default => false
-    t.boolean "hunger",         :default => false
-    t.boolean "seniors",        :default => false
-    t.boolean "revitilization", :default => false
-    t.boolean "veterans",       :default => false
-    t.boolean "homeless",       :default => false
-    t.boolean "lgbt",           :default => false
-    t.string  "other"
+    t.string "cause_type"
   end
 
   create_table "causes_organizations", :force => true do |t|
@@ -79,12 +67,7 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "skills", :force => true do |t|
-    t.boolean "web_designer",       :default => false
-    t.boolean "web_developer",      :default => false
-    t.boolean "technical_training", :default => false
-    t.boolean "graphic_design",     :default => false
-    t.boolean "marketing",          :default => false
-    t.string  "other"
+    t.string "skill_type"
   end
 
   create_table "skills_volunteers", :force => true do |t|

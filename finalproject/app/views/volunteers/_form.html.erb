@@ -7,5 +7,8 @@
   <%= f.input :location %>
   <%= f.input :linkedin_url %>
   <%= f.input :portfolio_links %>
+
+  <%= f.association :skills, as: :check_boxes %>
+
   <%= f.button :submit, id: 'update_profile_button' %>
 <% end %>
