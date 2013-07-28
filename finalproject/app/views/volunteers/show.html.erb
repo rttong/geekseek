@@ -1,7 +1,7 @@
 <div>
   <ul class='dash_menu'>
 
-    <li class='one' class='picture'>PICTURE</li>
+    <li class='one' class='picture'><%= image_tag avatar_url(current_user) %></li>
 
     <li class='two' class='profile'><%= link_to "Profile", class:'menu_link', id: 'profile_button' %>
       <ul class='submenu'>
@@ -26,6 +26,6 @@
   <%= render 'volunteer_profile' %>
 </div>
 
-  
+
 
 
