@@ -1,11 +1,11 @@
 class CreateSkills < ActiveRecord::Migration
   def change
     create_table :skills do |t|
-      t.string :web_designer
-      t.string :web_developer
-      t.string :technical_training
-      t.string :graphic_design
-      t.string :marketing
+      t.boolean :web_designer, default: false
+      t.boolean :web_developer, default: false
+      t.boolean :technical_training, default: false
+      t.boolean :graphic_design, default: false
+      t.boolean :marketing, default: false
       t.string :other
     end
   end

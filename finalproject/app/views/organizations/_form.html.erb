@@ -1,7 +1,7 @@
 <%= simple_form_for @organization, url: organization_path, remote: true do |f| %>
   <%= f.input :org_name %>
   <%= f.input :location %>
-  <%= f.association :causes %>
+  <%= f.association :causes, :as => :collection_select %>
   <%= f.text_area :mission %>
   <%= f.input :description %>
   <%= f.input :year_founded %>
