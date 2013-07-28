@@ -31,6 +31,6 @@ $(document).ready(function(){
     e.preventDefault();
     $('#signup_form_org').fadeOut();
   });
-   
+
 });
 
