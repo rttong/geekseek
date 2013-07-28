@@ -11,9 +11,9 @@
     </li>
     <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
       <ul class='submenu'>
-        <li><%= link_to "Interested In" %></li>
-        <li><%= link_to "Working on" %></li>
-        <li><%= link_to "Completed" %></li>
+        <li><%= link_to "Interested In", '#', class:'menu_link', remote: true %></li>
+        <li><%= link_to "Working on", class:'menu_link', remote: true  %></li>
+        <li><%= link_to "Completed", class:'menu_link', remote: true %></li>
       </ul>
     </li>
     <li><%= link_to "Feedback" %></li>
