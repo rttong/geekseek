@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.profile_type == 'volunteer'
-      volunteer_url(resource)
+      volunteer_url
     else
-      organization_url(resource)
+      organization_url
     end
   end
 
