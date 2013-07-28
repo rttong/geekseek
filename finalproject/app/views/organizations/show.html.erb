@@ -1,15 +1,23 @@
-<div id="org_menu">
-  <ul>
-    <li>Profile </li>
-    <li>Project Requests Posted</li>
-    <li>Feedback</li>
+<div>
+  <ul class='dash_menu'>
+    <li class='one' class='picture'>PICTURE</li>
+    <li class='two' class='profile'><%= link_to "Profile", '#', id: 'profile_button' %>
+      <ul class='submenu'>
+        <li><%= link_to 'Edit Account', edit_volunteer_path %></li>
+        <li><%= link_to 'Change Email/Password', edit_user_registration_path %></li>
+      </ul>
+    </li>
+    <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
+      <ul class='submenu'>
+        <li><%= link_to "Interested In" %></li>
+        <li><%= link_to "Working on" %></li>
+        <li><%= link_to "Completed" %></li>
+      </ul>
+    </li>
+    <li><%= link_to "Feedback" %></li>
   </ul>
-
-  <%= link_to 'Edit Account', edit_organization_path %>
-
-  <%= link_to 'Change Email/Password', edit_user_registration_path %>
 </div>
 
-<div id="org_content">
+<div id="dash_content">
 
 </div>
