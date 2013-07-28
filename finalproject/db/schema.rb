@@ -28,20 +28,20 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "causes", :force => true do |t|
-    t.string "adult_ed"
-    t.string "job_readiness"
-    t.string "special_needs"
-    t.string "animals"
-    t.string "childrens_ed"
-    t.string "environment"
-    t.string "health"
-    t.string "hunger"
-    t.string "seniors"
-    t.string "revitilization"
-    t.string "veterans"
-    t.string "homeless"
-    t.string "lgbt"
-    t.string "other"
+    t.boolean "adult_ed",       :default => false
+    t.boolean "job_readiness",  :default => false
+    t.boolean "special_needs",  :default => false
+    t.boolean "animals",        :default => false
+    t.boolean "childrens_ed",   :default => false
+    t.boolean "environment",    :default => false
+    t.boolean "health",         :default => false
+    t.boolean "hunger",         :default => false
+    t.boolean "seniors",        :default => false
+    t.boolean "revitilization", :default => false
+    t.boolean "veterans",       :default => false
+    t.boolean "homeless",       :default => false
+    t.boolean "lgbt",           :default => false
+    t.string  "other"
   end
 
   create_table "causes_organizations", :force => true do |t|
@@ -79,12 +79,12 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "skills", :force => true do |t|
-    t.string "web_designer"
-    t.string "web_developer"
-    t.string "technical_training"
-    t.string "graphic_design"
-    t.string "marketing"
-    t.string "other"
+    t.boolean "web_designer",       :default => false
+    t.boolean "web_developer",      :default => false
+    t.boolean "technical_training", :default => false
+    t.boolean "graphic_design",     :default => false
+    t.boolean "marketing",          :default => false
+    t.string  "other"
   end
 
   create_table "skills_volunteers", :force => true do |t|
