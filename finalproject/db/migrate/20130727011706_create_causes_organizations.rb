@@ -1,5 +1,5 @@
 class CreateCausesOrganizations < ActiveRecord::Migration
-  def create
+  def change
     create_table :causes_organizations do |t|
       t.belongs_to :cause
       t.belongs_to :organization

@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
     t.string "other"
   end
 
+  create_table "categories_projects", :force => true do |t|
+    t.integer "category_id"
+    t.integer "project_id"
+  end
+
   create_table "causes", :force => true do |t|
     t.string "adult_ed"
     t.string "job_readiness"
@@ -37,6 +42,11 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
     t.string "homeless"
     t.string "lgbt"
     t.string "other"
+  end
+
+  create_table "causes_organizations", :force => true do |t|
+    t.integer "cause_id"
+    t.integer "organization_id"
   end
 
   create_table "organizations", :force => true do |t|
@@ -63,6 +73,11 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
 
   add_index "projects", ["organization_id"], :name => "index_projects_on_organization_id"
 
+  create_table "projects_volunteers", :force => true do |t|
+    t.integer "project_id"
+    t.integer "volunteer_id"
+  end
+
   create_table "skills", :force => true do |t|
     t.string "web_designer"
     t.string "web_developer"
@@ -70,6 +85,11 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
     t.string "graphic_design"
     t.string "marketing"
     t.string "other"
+  end
+
+  create_table "skills_volunteers", :force => true do |t|
+    t.integer "skill_id"
+    t.integer "volunteer_id"
   end
 
   create_table "users", :force => true do |t|
