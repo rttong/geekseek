@@ -18,8 +18,8 @@ $(document).ready(function(){
   });   
 
   $('.menu_link').on('ajax:success', function(event,data,xhr){
-    debugger
-    // $('.dash_content').append(xhr);
+    console.log(data);
+    $('.dash_content').append(data);
   });
 
 });
