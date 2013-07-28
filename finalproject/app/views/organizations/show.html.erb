@@ -1,7 +1,7 @@
 <div>
   <ul class='dash_menu'>
     <li class='one' class='picture'>PICTURE</li>
-    <li class='two' class='profile'><%= link_to "Profile", '/dashboards/_org_profile', id: 'profile_button', class:'menu_link', remote: true %>
+    <li class='two' class='profile'><%= link_to "Profile", '/dashboards/show_org_profile', id: 'profile_button', class:'menu_link', remote: true %>
       <ul class='submenu'>
         <li><%= link_to 'Edit Account', '/dashboards/edit_org', class:'menu_link', remote: true %></li>
         <li><%= link_to 'Change Email/Password', edit_user_registration_path, class:'menu_link', remote: true %></li>
