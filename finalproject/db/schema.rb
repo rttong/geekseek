@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728202033) do
+ActiveRecord::Schema.define(:version => 20130728225056) do
 
   create_table "categories", :force => true do |t|
     t.string "website_redesign"
@@ -79,12 +79,7 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "skills", :force => true do |t|
-    t.string "web_designer"
-    t.string "web_developer"
-    t.string "technical_training"
-    t.string "graphic_design"
-    t.string "marketing"
-    t.string "other"
+    t.string "skill_type"
   end
 
   create_table "skills_volunteers", :force => true do |t|
