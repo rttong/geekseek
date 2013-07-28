@@ -13,13 +13,23 @@ $(document).ready(function(){
 
   $('#signup_v').click( function(e) {
     e.preventDefault();
-    $('#signup_form_v').toggle();
+    $('#signup_form_v').fadeIn();
+  });
+
+  $('#signup_v_close').click(function(e) {
+    e.preventDefault();
+    $('#signup_form_v').fadeOut();
   });
 
 
   $('#signup_org').click( function(e) {
     e.preventDefault();
-    $('#signup_form_org').toggle();
+    $('#signup_form_org').fadeIn();
+  });
+
+  $('#signup_org_close').click(function(e) {
+    e.preventDefault();
+    $('#signup_form_org').fadeOut();
   });
    
 });
