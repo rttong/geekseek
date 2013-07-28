@@ -3,17 +3,17 @@
 
     <li class='one' class='picture'>PICTURE</li>
 
-    <li class='two' class='profile'><%= link_to "Profile", '#', id: 'profile_button' %>
+    <li class='two' class='profile'><%= link_to "Profile", '/dashboards/v_profile', class:'menu_link', id: 'profile_button' %>
       <ul class='submenu'>
-        <li><%= link_to 'Edit Account', edit_volunteer_path %></li>
-        <li><%= link_to 'Change Email/Password', edit_user_registration_path %></li>
+        <li><%= link_to 'Edit Account', '/dashboards/edit_volunteer_profile', class:'menu_link', remote:true %></li>
+        <li><%= link_to 'Change Email/Password', edit_user_registration_path, class:'menu_link', remote:true %></li>
       </ul>
     </li>
     <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
       <ul class='submenu'>
-        <li><%= link_to "Interested In", '/pages/interested_in', class:'menu_link', remote: true %></li>
-        <li><%= link_to "Working on", class:'menu_link', remote: true  %></li>
-        <li><%= link_to "Completed", class:'menu_link', remote: true %></li>
+        <li><%= link_to "Interested In", '/dashboards/interested_in', class:'menu_link', remote: true %></li>
+        <li><%= link_to "Working on", '/dashboards/working_on', class:'menu_link', remote: true  %></li>
+        <li><%= link_to "Completed", '/dashboards/completed_projects', class:'menu_link', remote: true %></li>
       </ul>
     </li>
     <li><%= link_to "Feedback" %></li>

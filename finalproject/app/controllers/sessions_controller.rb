@@ -1,3 +1,6 @@
+# to be removed????
+
+
 # class SessionsController < ApplicationController
 #   before_filter :authenticate_user!
 
