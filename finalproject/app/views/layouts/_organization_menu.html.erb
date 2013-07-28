@@ -8,9 +8,9 @@
   </li>
   <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
     <ul class='submenu'>
-      <li><%= link_to "Create New Project",  '/dashboards/new_project', remote: true %></li>
-      <li><%= link_to "Manage Current Projects", '/dashboards/current_org_projects', remote: true %></li>
-      <li><%= link_to "View Completed Projects", '/dashboards/completed_org_projects', remote: true %></li>
+      <li><%= link_to "Create New Project",  new_project_path, remote: true %></li>
+      <li><%= link_to "Manage Current Projects", projects_path(state: "active"), remote: true %></li>
+      <li><%= link_to "View Completed Projects", projects_path(state: "completed"), remote: true %></li>
     </ul>
   </li>
 </ul>

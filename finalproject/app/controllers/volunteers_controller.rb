@@ -2,7 +2,7 @@ class VolunteersController < ApplicationController
   before_filter :authenticate_user!
   before_filter :find_volunteer
 
-  layout "user"
+  layout "dashboard"
 
   def show
   end

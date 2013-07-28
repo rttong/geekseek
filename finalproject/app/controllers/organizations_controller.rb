@@ -2,7 +2,7 @@ class OrganizationsController < ApplicationController
   before_filter :authenticate_user!
   before_filter :find_organization
 
-  layout "user"
+  layout "dashboard"
 
   def show
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728015534) do
+ActiveRecord::Schema.define(:version => 20130728092905) do
 
   create_table "categories", :force => true do |t|
     t.string "website_redesign"
@@ -56,9 +56,12 @@ ActiveRecord::Schema.define(:version => 20130728015534) do
     t.string  "title"
     t.string  "summary"
     t.date    "target_date"
-    t.integer "organizations_id"
+    t.integer "organization_id"
     t.string  "importance"
+    t.string  "state",           :default => "active"
   end
+
+  add_index "projects", ["organization_id"], :name => "index_projects_on_organization_id"
 
   create_table "skills", :force => true do |t|
     t.string "web_designer"
