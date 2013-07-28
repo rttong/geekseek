@@ -6,6 +6,11 @@ $(document).ready(function(){
     // how the fuck do I turn this off? 
   });
 
+  $('#sign_in_close').click(function(e) {
+    e.preventDefault();
+    $('#sign_in_form').slideUp();
+  });
+
   $('#signup_v').click( function(e) {
     e.preventDefault();
     $('#signup_form_v').toggle();
