@@ -1,0 +1,15 @@
+<% @volunteer = current_user.volunteer %>
+
+<%= @volunteer.full_name %>
+<!-- 
+create_table "volunteers", :force => true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "skills"
+    t.string  "job_history"
+    t.string  "phone"
+    t.string  "availability"
+    t.string  "location"
+    t.string  "portfolio_links"
+    t.integer "user_id"
+  end -->

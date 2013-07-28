@@ -25,5 +25,11 @@ $(document).ready(function(){
     event.preventDefault();
     $('.dash_content').html(data);
   });
+
+   $('#update_profile_button').on('ajax:success', function(event,data,xhr){
+    event.preventDefault();
+    $('.dash_content').html(data);
+  });
+   
 });
 
