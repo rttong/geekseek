@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728092905) do
+ActiveRecord::Schema.define(:version => 20130728202033) do
 
   create_table "categories", :force => true do |t|
     t.string "website_redesign"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20130728092905) do
     t.string  "location"
     t.string  "portfolio_links"
     t.integer "user_id"
+    t.string  "linkedin_url"
   end
 
 end
