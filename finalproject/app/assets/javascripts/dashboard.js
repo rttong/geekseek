@@ -23,7 +23,6 @@ $(document).ready(function(){
 
   $('#profile_button').on('ajax:success', function(event,data,xhr){
     event.preventDefault();
-    debugger
     $('.dash_content').html(data);
   });
 
