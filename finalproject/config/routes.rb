@@ -7,6 +7,8 @@ Finalproject::Application.routes.draw do
   resources :organizations
   resources :volunteers
 
+  match "/pages/:name" => "pages#show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
