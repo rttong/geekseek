@@ -1,12 +1,19 @@
-<div id="org_menu">
+<div id="_menu">
   <ul>
-    <li><%= link_to "Photo" %></li>
-    <li><%= link_to "Profile" %> </li>
-    <li><%= link_to "Project Requests" %></li>
-    <li><%= link_to "Feedback" %></li>
+    <li> PICTURE </li>
+    <li><%= link_to "Profile", '#', id: 'profile_button'  %> </li>
+
+    <div class="profile">
+      <li><%= link_to 'Edit Account', edit_organization_path %></li>
+      <li><%= link_to 'Change Email/Password', edit_user_registration_path %></li>
+      <li><%= link_to "Delete Profile" %></li>
+    </div>
+
+    <li><%= link_to "Projects", '#', id: 'org_projects_button' %></li>
+    <li><%= link_to "Feedback" '#' %></li>
   </ul>
 
-  <%= link_to 'Edit Account', edit_organization_path %>
+
 
 </div>
 
