@@ -1,16 +1,15 @@
 <div>
-  <ul id='dash_menu'>
+  <ul class='dash_menu'>
 
-    <li id='one' class='picture'>PICTURE</li>
+    <li class='one' class='picture'>PICTURE</li>
 
-    <li id='two' class='profile'><%= link_to "Profile", '#', id: 'profile_button' %>
+    <li class='two' class='profile'><%= link_to "Profile", '#', id: 'profile_button' %>
       <ul class='submenu'>
         <li><%= link_to 'Edit Account', edit_volunteer_path %></li>
         <li><%= link_to 'Change Email/Password', edit_user_registration_path %></li>
-        <li><%= link_to "Delete Profile" %></li>
       </ul>
     </li>
-    <li id='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
+    <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
       <ul class='submenu'>
         <li><%= link_to "Interested In" %></li>
         <li><%= link_to "Working on" %></li>
@@ -23,7 +22,7 @@
 
 </div>
 
-<div id="v_content">
+<div class="dash_content">
 </div>
 
   

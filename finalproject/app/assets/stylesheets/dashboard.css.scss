@@ -1,33 +1,33 @@
-#dash_menu, #org_menu {
+.dash_menu {
   width: 30%;
-  height: 850px;
+  height: 80px;
   background-color: red;
   float: left;
 }
 
-#v_content, #org_content{
-  width: 70%;
+.dash_content{
+  width: 50%;
   height: 850px;
   background-color: purple;
   float: right;
 }
 
-#dash_menu li > .submenu{
+.dash_menu li > .submenu{
   display: none;
 }
 
-#dash_menu li.profile > a:before { background-position: -24px 0px; }
-#dash_menu li.profile:hover > a:before,
-#dash_menu li.profile:target > a:before,
-#dash_menu li.profile > a.active:before { background-position: -24px -24px; }
+.dash_menu li.profile > a:before { background-position: -24px 0px; }
+.dash_menu li.profile:hover > a:before,
+.dash_menu li.profile:target > a:before,
+.dash_menu li.profile > a.active:before { background-position: -24px -24px; }
 
-#dash_menu li.projects > a:before { background-position: -24px 0px; }
-#dash_menu li.projects:hover > a:before,
-#dash_menu li.projects:target > a:before,
-#dash_menu li.projects > a.active:before { background-position: -24px -24px; }
+.dash_menu li.projects > a:before { background-position: -24px 0px; }
+.dash_menu li.projects:hover > a:before,
+.dash_menu li.projects:target > a:before,
+.dash_menu li.projects > a.active:before { background-position: -24px -24px; }
 
 
-#dash_menu li:target > .submenu {
+.dash_menu li:target > .submenu {
   display:block;
 }
 

@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-  $('#dash_menu').accordion();
+  $('.dash_menu').accordion();
 
-  var menu_head = $('#dash_menu > li > a'),
-      menu_body = $('#dash_menu li > .submenu');
+  var menu_head = $('.dash_menu > li > a'),
+      menu_body = $('.dash_menu li > .submenu');
 
   menu_head.first().addClass('active').next().slideDown('normal'); 
   menu_head.on('click',function(event){
