@@ -1,0 +1,24 @@
+<h2>Create Volunteer Profile</h2>
+<div id="create_vol_prof">
+<%= simple_form_for current_user.volunteer do |f| %>
+<%= f.input :first_name %>
+<%= f.input :last_name %>
+ <!-- NEED TO FIGURE OUT SKILLS -->
+<%= f.input :job_history %> <!-- linkedin? -->
+<%= f.input :phone %>
+<%= f.input :availability %>
+<%= f.input :location %>
+<%= f.input :portfolio_links %>
+<%= f.button :submit %>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+

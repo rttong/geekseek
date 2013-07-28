@@ -1,7 +1,24 @@
-<div id="org_menu">
-  <ul>
-    <li>Profile </li>
-    <li>Project Requests Posted</li>
-    <li>Feedback</li>
-  </ul>
+<div>
+  <ul class='dash_menu'>
+    <li class='one' class='picture'>PICTURE</li>
+    <li class='two' class='profile'><%= link_to "Profile", '/pages/_org_profile', id: 'profile_button', class:'menu_link', remote: true %>
+      <ul class='submenu'>
+        <li><%= link_to 'Edit Account', '/dashboards/edit_org', class:'menu_link', remote: true %></li>
+        <li><%= link_to 'Change Email/Password', edit_user_registration_path, class:'menu_link', remote: true %></li>
+      </ul>
+    </li>
+    <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
+      <ul class='submenu'>
+        <li><%= link_to "Post New Project", new_project_path, class:'menu_link', remote: true %></li>
+        </li>
+        <li><%= link_to "Manage Current Projects", '/pages/', class:'menu_link', remote: true %></li>
+        </li>
+        <li><%= link_to "View Completed Projects", '/pages/interested_in', class:'menu_link', remote: true %></li>
+    </li>
+
+</ul>
+</div>
+
+<div class="dash_content">
+
 </div>

@@ -1,0 +1,11 @@
+<h2>Create A New Project</h2>
+<div id="create_project">
+  <%= simple_form_for current_user.organization.project do |f| %>
+    <%= f.date :target_date %>
+    <%= f.input :title %>
+    <%= f.text_area :summary %>
+    <%= f.text_area :importance %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
