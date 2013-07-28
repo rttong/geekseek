@@ -10,16 +10,3 @@
     <li>Program Description: <%= @organization.description %></li>
   </ul>
 </div>
-
-<%= simple_form_for @organization, url: organization_path, remote: true do |f| %>
-  <%= f.input :org_name %>
-  <%= f.input :location %>
-  <%= f.association :causes, as: :check_boxes, :include_blank => false %>
-  <%= f.text_area :mission %>
-  <%= f.input :description %>
-  <%= f.input :year_founded %>
-  <%= f.number_field :size %>
-  <%= f.url_field :url %>
-  <%= f.file_field :avatar %>
-  <%= f.button :submit %>
-<% end %>
