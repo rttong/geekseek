@@ -2,10 +2,11 @@ Finalproject::Application.routes.draw do
   devise_for :users
 
   get "home/index"
-  
+
   root :to => "home#index"
   resources :organizations
   resources :volunteers
+  resources :projects
 
   match "/dashboards/:name" => "dashboards#show"
 

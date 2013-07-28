@@ -1,23 +1,24 @@
 <div>
   <ul class='dash_menu'>
     <li class='one' class='picture'>PICTURE</li>
-    <li class='two' class='profile'><%= link_to "Profile", '/', id: 'profile_button', class:'menu_link', remote: true %>
+    <li class='two' class='profile'><%= link_to "Profile", '/dashboards/_org_profile', id: 'profile_button', class:'menu_link', remote: true %>
       <ul class='submenu'>
-        <li><%= link_to 'Edit Account', edit_volunteer_path %></li>
-        <li><%= link_to 'Change Email/Password', edit_user_registration_path %></li>
+        <li><%= link_to 'Edit Account', '/dashboards/edit_org', class:'menu_link', remote: true %></li>
+        <li><%= link_to 'Change Email/Password', edit_user_registration_path, class:'menu_link', remote: true %></li>
       </ul>
     </li>
     <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
       <ul class='submenu'>
-        <li><%= link_to "Interested In" %></li>
-        <li><%= link_to "Working on" %></li>
-        <li><%= link_to "Completed" %></li>
-      </ul>
+        <li><%= link_to "Create New Project",  '/dashboards/new_project', class:'menu_link', remote: true %></li>
+      </li>
+      <li><%= link_to "Manage Current Projects", '/dashboards/current_org_projects', class:'menu_link', remote: true %></li>
     </li>
-    <li><%= link_to "Feedback" %></li>
-  </ul>
+    <li><%= link_to "View Completed Projects", '/dashboards/completed_org_projects', class:'menu_link', remote: true %></li>
+  </li>
+
+</ul>
 </div>
 
-<div id="dash_content">
+<div class="dash_content">
 
 </div>

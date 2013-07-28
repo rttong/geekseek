@@ -1,4 +1,6 @@
 <div id="signup_form_v">
+  <a href="#" id="signup_v_close">Close</a>
+
   <%= simple_form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
     <%= f.error_notification %>
 
