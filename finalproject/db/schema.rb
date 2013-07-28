@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728202033) do
+ActiveRecord::Schema.define(:version => 20130728225058) do
 
   create_table "categories", :force => true do |t|
     t.string "website_redesign"
@@ -28,20 +28,7 @@ ActiveRecord::Schema.define(:version => 20130728202033) do
   end
 
   create_table "causes", :force => true do |t|
-    t.string "adult_ed"
-    t.string "job_readiness"
-    t.string "special_needs"
-    t.string "animals"
-    t.string "childrens_ed"
-    t.string "environment"
-    t.string "health"
-    t.string "hunger"
-    t.string "seniors"
-    t.string "revitilization"
-    t.string "veterans"
-    t.string "homeless"
-    t.string "lgbt"
-    t.string "other"
+    t.string "cause_type"
   end
 
   create_table "causes_organizations", :force => true do |t|
