@@ -3,6 +3,7 @@ class Volunteer < ActiveRecord::Base
   has_many :skills
   has_many :projects
   belongs_to :user
+  accepts_nested_attributes_for :skills
 
   def full_name
     "#{first_name} #{last_name}"
