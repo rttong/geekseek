@@ -18,7 +18,12 @@ $(document).ready(function(){
   });
 
   $('.menu_link').on('ajax:success', function(event,data,xhr){
-    console.log(data);
+    $('.dash_content').html(data);
+  });
+
+  $('#profile_button').on('ajax:success', function(event,data,xhr){
+    event.preventDefault();
+    debugger
     $('.dash_content').html(data);
   });
 });

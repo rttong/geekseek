@@ -19,13 +19,14 @@ class VolunteersController < ApplicationController
   end
 
   def edit
-   @user = User.find(params[:id])
-   @volunteer = @user.volunteer
+    @volunteer = current_user.volunteer
+   # @volunteer = User.find(params[:id])
+    
   end
 
- def update
-  @volunteer = Volunteer.find(params[:id])
-  @volunteer.update_attributes(params[:volunteer])
+  def update
+    @volunteer = Volunteer.find(params[:id])
+    @volunteer.update_attributes(params[:volunteer])
   end
 
 end
