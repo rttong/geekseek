@@ -17,19 +17,8 @@ $(document).ready(function(){
     }
   });
 
-  $('.menu_link').on('ajax:success', function(event,data,xhr){
-    $('.dash_content').html(data);
-  });
-
-  $('#profile_button').on('ajax:success', function(event,data,xhr){
-    event.preventDefault();
-    $('.dash_content').html(data);
-  });
-
-   $('#update_profile_button').on('ajax:success', function(event,data,xhr){
-    event.preventDefault();
-    $('.dash_content').html(data);
+  $('.submenu a').on('ajax:success', function(event,data,xhr){
+    $('.content').replaceWith($(data).find(".content"));
   });
    
 });
-

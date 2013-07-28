@@ -1,32 +1,29 @@
 class OrganizationsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :find_organization
 
-  def index
-    @users = User.all
-  end
+  layout "user"
 
   def show
-    @user = User.find(params[:id])
-    @organization = @user.organization
-    
   end
 
   def new
-    @organization = Organization.new
   end
 
   def create
-    @organization = Organization.create(params[:organization])
+    @organization.attributes = params[:organization]
+    @organization.save
   end
 
   def edit
-    @user = User.find(params[:id])
-    @organization = @user.organization
   end
 
   def update
-    @organization = Organization.find(params[:id])
     @organization.update_attributes(params[:organization])
+  end
+
+  def find_organization
+    @organization = current_user.organization || current_user.build_organization
   end
 
 end

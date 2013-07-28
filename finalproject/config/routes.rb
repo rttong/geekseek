@@ -4,8 +4,8 @@ Finalproject::Application.routes.draw do
   get "home/index"
 
   root :to => "home#index"
-  resources :organizations
-  resources :volunteers
+  resource :organization
+  resource :volunteer
   resources :projects
 
   match "/dashboards/:name" => "dashboards#show"

@@ -1,6 +1,4 @@
-<h2>Edit Volunteer Profile</h2>
-  <div id="edit_vol_prof">
-  <%= simple_form_for current_user.volunteer do |f| %>
+<%= simple_form_for @volunteer, url: volunteer_path, remote: true do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
    <!-- NEED TO FIGURE OUT SKILLS -->
@@ -10,5 +8,4 @@
   <%= f.input :location %>
   <%= f.input :portfolio_links %>
   <%= f.button :submit, id: 'update_profile_button' %>
-  <% end %>
-</div>
+<% end %>

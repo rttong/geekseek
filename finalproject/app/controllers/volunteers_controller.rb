@@ -1,32 +1,29 @@
 class VolunteersController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :find_volunteer
 
-  def index
-    @users = User.all
-  end
+  layout "user"
 
   def show
-    @user = User.find(params[:id])
-    @volunteer = @user.volunteer
   end
 
   def new
-    @volunteer = Volunteer.new
   end
 
   def create
-    @volunteer = Volunteer.create(params[:volunteer])
+    @volunteer.attributes = params[:volunteer]
+    @volunteer.save
   end
 
   def edit
-    @volunteer = current_user.volunteer
-   # @volunteer = User.find(params[:id])
-    
   end
 
   def update
-    @volunteer = Volunteer.find(params[:id])
     @volunteer.update_attributes(params[:volunteer])
+  end
+
+  def find_volunteer
+    @volunteer = current_user.volunteer || current_user.build_volunteer
   end
 
 end
