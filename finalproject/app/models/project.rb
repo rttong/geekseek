@@ -8,8 +8,12 @@ class Project < ActiveRecord::Base
   scope :completed, -> { where(state: "completed") }
 
   def self.search(params={})
-    relation = self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
+    params ||= {}
+    relation = self.unscoped
+    relation = self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids]) if params[:cause_ids].try(:any?)
+    relation = relation.joins(:categories).where("categories.id IN (?)", params[:category_ids])
     # relation.where("title ILIKE('%?%') OR summary ILIKE('%?%')", params[:text],params[:text]) if params[:text]
+    relation
   end
 
   def self.find_causes
