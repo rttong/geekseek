@@ -11,15 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130728225058) do
+ActiveRecord::Schema.define(:version => 20130729013058) do
 
   create_table "categories", :force => true do |t|
-    t.string "website_redesign"
-    t.string "website_creation"
-    t.string "branding"
-    t.string "database_creation"
-    t.string "graphic_design"
-    t.string "other"
+    t.string "category_type"
   end
 
   create_table "categories_projects", :force => true do |t|
