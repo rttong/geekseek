@@ -57,10 +57,15 @@ body {
 }
 
 #image_carousel{
-  height: 250px;
+  height: 600px;
   width: 860px;
   background-color: #444;
   margin: 0 auto;
+
+  .image_container {
+    width: 500px;
+    height: 300px;
+  }
 }
 
 #sign_up {
@@ -74,7 +79,7 @@ body {
 }
 
 #inner_content{
-  height:200px;
+  height:300px;
   width:860px;
   background-color: #ddd;
   margin: 0 auto;
