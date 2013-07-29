@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
     @projects = @projects.send(params[:state]) if params[:state]
     @projects
     @causes = Cause.all
+    @categories = Category.all
     # @projects = @organization.projects.search(params[:search])
   end
 
