@@ -11,4 +11,8 @@ class Project < ActiveRecord::Base
     relation = self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
     relation.where("title ILIKE('%?%')", params[:text]) if params[:text]
   end
+
+  def self.find_causes
+    # self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
+  end
 end
