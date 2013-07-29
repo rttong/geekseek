@@ -11,3 +11,10 @@ Cause.create([{ cause_type: 'Adult Education' }, { cause_type: 'Children Educati
 Skill.create([{ skill_type: 'Web Design' }, { skill_type: 'Web Developer' }, { skill_type: 'Technical Training' }, { skill_type: 'Graphic Design' }, { skill_type: 'Marketing' }, { skill_type: 'Other' }])
 
 Category.create([{ category_type: 'Web Design'}, { category_type: 'Web Development'}, { category_type: 'Graphic Design'}])
+
+Project.create(title: "Develop Our New Website", summary: "We rebranded three years ago but haven't had the opportunity to update our really old website.  We've already come up with a general them of how things should look by need help implementing", target_date: 08/07/2013, organization_id: 1, importance: "Our website doesn't reflect who we are as an organization and I feel like we're missing out on potential donors and clients.", state: "active")
+
+Project.create(title: "Create Our New Logo", summary: "We changed our name and need a new logo to go along with it.  You'll have free range as we're not the most creative buncc.", target_date: 12/01/2014, organization_id: 2, importance: "We really need to start gaining some brand recognition and this is the first step in doing so.", state: "active")
+
+Project.create(title: "Update our Website", summary: "After going throug our whole budget our developer bailed halfway through doing our website redesign.  ", target_date: 08/07/2013, organization_id: 1, importance: "Our website doesn't reflect who we are as an organization and I feel like we're missing out on ", state: "active")
+
