@@ -1,1 +1,14 @@
-individual
+individual<div id="project_info">
+  Project info
+  <div id="apply">
+    <%= link_to "I'm interested in this project", '#' %>
+  </div>
+</div>
+
+<div id="org_info">
+  organization info for this project
+</div>
+
+<div id="related_projects">
+  related projects
+</div>

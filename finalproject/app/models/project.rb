@@ -9,11 +9,11 @@ class Project < ActiveRecord::Base
 
   def self.search(params={})
     relation = self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
-    relation.where("title ILIKE('%?%') OR summary ILIKE('%?%')", params[:text],params[:text]) if params[:text]
-
+    # relation.where("title ILIKE('%?%') OR summary ILIKE('%?%')", params[:text],params[:text]) if params[:text]
   end
 
   def self.find_causes
     # self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
   end
+
 end
