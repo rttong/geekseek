@@ -9,6 +9,8 @@ class ProjectsController < ApplicationController
     @projects = @organization.projects
     @projects = @projects.send(params[:state]) if params[:state]
     @projects
+
+    @projects = @organization.projects.search(params[:search])
   end
 
   def show

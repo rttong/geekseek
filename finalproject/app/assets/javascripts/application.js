@@ -15,4 +15,6 @@
 //= require jquery.ui.all
 //= require_tree .
 
-
+ $(function() {
+    $('input.datepicker').datepicker();
+  });
