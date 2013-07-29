@@ -3,13 +3,12 @@ class ProjectsController < ApplicationController
   before_filter :find_organization
   before_filter :find_project, only: [:show, :edit, :update, :destroy]
 
-  layout "dashboard"
+  layout "project_dashboard"
 
   def index
     @projects = @organization.projects
     @projects = @projects.send(params[:state]) if params[:state]
     @projects
-
     @projects = @organization.projects.search(params[:search])
   end
 
