@@ -1,6 +1,5 @@
 class ProjectsController < ApplicationController
 
-  # before_filter :find_organization
   before_filter :find_project, only: [:show, :edit, :update, :destroy]
 
   layout :set_layout
