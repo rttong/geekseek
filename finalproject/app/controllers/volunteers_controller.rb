@@ -25,5 +25,6 @@ class VolunteersController < ApplicationController
   def find_volunteer
     @volunteer = current_user.volunteer || current_user.build_volunteer
   end
-
 end
+
+

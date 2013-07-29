@@ -1,31 +1,33 @@
 class ProjectsController < ApplicationController
 
-  # before_filter :find_organization
-  before_filter :find_project, only: [:show, :edit, :update, :destroy]
+  before_filter :find_project, only: [:edit, :update, :destroy]
+  # commented the :show
+  before_filter :find_organization, only: [:new, :create, :index]
 
   layout :set_layout
 
   def index
-    @projects = Project.unscoped
+    @projects = @organization.projects
     @projects = @projects.send(params[:state]) if params[:state]
     @projects
   end
 
   def browse
-    @projects = Project.all
+    @projects = Project.search(params[:search]) 
     @causes = Cause.all
     @categories = Category.all
   end
 
   def show
+    @project = Project.find(params[:id])
   end
 
   def new
-    @project = current_user.organization.projects.build
+    @project = @organization.projects.build
   end
 
   def create
-    @project = current_user.organization.projects.build(params[:project])
+    @project = @organization.projects.build(params[:project])
     @project.save
   end
 
@@ -46,9 +48,15 @@ class ProjectsController < ApplicationController
     @project = @organization.projects.find(params[:id])
   end
 
+  def find_organization
+    @organization = current_user.organization
+  end
+
   def set_layout
     if action_name == "browse"
       "project_dashboard"
+    elsif action_name == "show"
+      "application"
     else
       "dashboard"
     end

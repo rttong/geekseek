@@ -1,8 +1,6 @@
-<h1>Projects</h1>
-
+<h1>Project</h1>
 <div class="projects">
   <% @projects.each do |project| %>
-    <h3><%= project.title %></h3>
-    <p><%= project.summary %></p>
+    <%= link_to "#{project.title}", project_path(project) %>
   <% end %>
 </div>

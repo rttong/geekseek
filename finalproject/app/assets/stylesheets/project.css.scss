@@ -1,0 +1,17 @@
+#project_menu {
+  width: 30%;
+  height: 80px;
+  background-color: red;
+  float: left;
+}
+
+.projects{
+  width: 50%;
+  height: 850px;
+  background-color: purple;
+  float: right;
+}
+
+.dash_menu li > .submenu{
+  display: none;
+}
