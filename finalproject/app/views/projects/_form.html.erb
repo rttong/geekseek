@@ -1,8 +1,8 @@
-<%= simple_form_for @project, :url => project_path, remote: true do |f| %>
+<%= simple_form_for @project, remote: true do |f| %>
   <%= f.input :target_date %>
   <%= f.input :title %>
   <%= f.association :categories, :label_method => lambda { |category| "#{category.category_type}" }, as: :check_boxes %>
-  <%= f.text_area :summary %>
+  <%= f.text_area :summary, :label => "Summary" %>
   <%= f.text_area :importance %>
   <%= f.button :submit %>
 <% end %>
