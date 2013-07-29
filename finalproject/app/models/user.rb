@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :profile_type
   has_one :volunteer, dependent: :destroy
   has_one :organization, dependent: :destroy
+  
 
   after_create :generate_volunteer_or_organization
 
