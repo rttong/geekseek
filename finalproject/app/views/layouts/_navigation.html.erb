@@ -3,6 +3,7 @@
 </div>
 
 <div id="menu">
+  <li> <%= link_to 'Browse Projects', browse_projects_path  %>  </li>
   <% if user_signed_in? %>
     <ul>
       <% if current_user.organization? %>

@@ -1,5 +1,10 @@
     <div id="image_carousel">
-      carousel
+      <ul class="carousel">
+        <li><%= image_tag '/assets/carousel_01.jpg' %></li>
+        <li><%= image_tag '/assets/carousel_02.jpg' %></li>
+        <li><h2 style="color:#fff;">HI!</h2></li>
+        <li><%= image_tag '/assets/carousel_03.jpg' %></li>
+      </ul>
     </div>
 
     <div id="sign_up">
@@ -20,8 +25,6 @@
         <%= render "devise/registrations/signup_org" %>
       </div>
     </div>
-
-
 
     <div id="inner_content">
     	other content

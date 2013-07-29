@@ -1,7 +1,8 @@
 <h1>Projects</h1>
+
 <div class="projects">
   <% @projects.each do |project| %>
-    <%= project.title %><br>
-    <%= project.summary %><br>
+    <h3><%= project.title %></h3>
+    <p><%= project.summary %></p>
   <% end %>
 </div>
