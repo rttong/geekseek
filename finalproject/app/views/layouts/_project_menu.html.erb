@@ -1,4 +1,5 @@
 <%= form_tag projects_path, method: "get", remote: true, id: 'search_form' do %>
+
   <h2>Causes</h2> 
   <% @causes.each do |cause| %>
     <%= check_box_tag "search[cause_ids][]", cause.id %> <%= cause.cause_type %>
