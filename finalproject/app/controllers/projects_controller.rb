@@ -1,11 +1,12 @@
 class ProjectsController < ApplicationController
 
   before_filter :find_project, only: [:show, :edit, :update, :destroy]
+  before_filter :find_organization, only: [:new, :create, :index]
 
   layout :set_layout
 
   def index
-    @projects = Project.unscoped
+    @projects = @organization.projects
     @projects = @projects.send(params[:state]) if params[:state]
     @projects
   end
@@ -20,11 +21,11 @@ class ProjectsController < ApplicationController
   end
 
   def new
-    @project = current_user.organization.projects.build
+    @project = @organization.projects.build
   end
 
   def create
-    @project = current_user.organization.projects.build(params[:project])
+    @project = @organization.projects.build(params[:project])
     @project.save
   end
 
@@ -43,6 +44,10 @@ class ProjectsController < ApplicationController
 
   def find_project
     @project = @organization.projects.find(params[:id])
+  end
+
+  def find_organization
+    @organization = current_user.organization
   end
 
   def set_layout

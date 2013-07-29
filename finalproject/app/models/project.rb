@@ -16,8 +16,4 @@ class Project < ActiveRecord::Base
     relation
   end
 
-  def self.find_causes
-    # self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids])
-  end
-
 end
