@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_filter :find_project, only: [:show, :edit, :update, :destroy]
+  before_filter :find_project, only: [:edit, :update, :destroy]
+  # commented the :show
   before_filter :find_organization, only: [:new, :create, :index]
 
   layout :set_layout
@@ -18,6 +19,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
   end
 
   def new
@@ -53,6 +55,8 @@ class ProjectsController < ApplicationController
   def set_layout
     if action_name == "browse"
       "project_dashboard"
+    elsif action_name == "show"
+      "application"
     else
       "dashboard"
     end
