@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def browse
-    @projects = Project.all
+    @projects = Project.search(params[:search])
     @causes = Cause.all
     @categories = Category.all
   end
