@@ -1,5 +1,6 @@
 <div class="dash_content">
   <ul>
+    <li> <%= image_tag @volunteer.avatar_url(current_user)%> </li>
     <li>Name: <%= @volunteer.full_name %></li>
     <li>Skills:</li>
     <ul>

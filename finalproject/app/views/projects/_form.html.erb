@@ -4,8 +4,6 @@
   <%= f.text_area :summary, :label => "Project Details" %>
   <%= f.text_area :importance, :label => "How will this help your organization" %>
   <%= f.association :categories, :label_method => lambda { |category| "#{category.category_type}" }, as: :check_boxes %>
-  <%= f.text_area :summary, :label => "Summary" %>
-  <%= f.text_area :importance %>
 
   <%= f.button :submit %>
 <% end %>
