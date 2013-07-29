@@ -4,9 +4,9 @@
   <%= f.association :causes, :label_method => lambda { |cause| "#{cause.cause_type}" }, as: :check_boxes %>
   <%= f.text_area :mission %>
   <%= f.input :description %>
-  <%= f.input :year_founded %>
-  <%= f.number_field :size %>
-  <%= f.url_field :url %>
+  <%= f.input :year_founded, :label => "Year Founded"  %>
+  <%= f.input :size, :label => "Number of Employees" %>
+  <%= f.input :url: :label => "Website" %>
   <%= f.file_field :avatar %>
   <%= f.button :submit %>
 <% end %>
