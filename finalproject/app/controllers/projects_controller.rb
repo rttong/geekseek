@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
     @projects
     @causes = Cause.all
     @categories = Category.all
-    # @projects = @organization.projects.search(params[:search])
+    @projects = @organization.projects.search(params[:search])
   end
 
   def show
