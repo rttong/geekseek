@@ -1,6 +1,6 @@
 <%= form_tag projects_path, method: "get" do %>
     
-  <%= [].each do |cause| %>
+  <%= @causes.each do |cause| %>
     <%= check_box_tag "search[cause_ids][]", cause.id %> <%= cause.cause_type %>
   <% end %>
 
