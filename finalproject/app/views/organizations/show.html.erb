@@ -1,1 +1,7 @@
-<%= render "organization" %>
+<% if @organization.org_name == nil %>
+  <%= render "create_profile" %>
+<% else %>
+  <%= render "organization" %>
+<% end %>
+
+

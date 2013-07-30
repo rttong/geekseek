@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,7 +12,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729013058) do
+
+ActiveRecord::Schema.define(:version => 20130730025105) do
 
   create_table "categories", :force => true do |t|
     t.string "category_type"
@@ -34,7 +36,6 @@ ActiveRecord::Schema.define(:version => 20130729013058) do
   create_table "organizations", :force => true do |t|
     t.string  "org_name"
     t.integer "user_id"
-    t.string  "cause"
     t.string  "mission"
     t.string  "description"
     t.integer "year_founded"
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20130729013058) do
   create_table "projects_volunteers", :force => true do |t|
     t.integer "project_id"
     t.integer "volunteer_id"
+    t.string  "status",       :default => "Pending"
   end
 
   create_table "skills", :force => true do |t|
@@ -91,7 +93,6 @@ ActiveRecord::Schema.define(:version => 20130729013058) do
   create_table "volunteers", :force => true do |t|
     t.string  "first_name"
     t.string  "last_name"
-    t.string  "skills"
     t.string  "job_history"
     t.string  "phone"
     t.string  "availability"

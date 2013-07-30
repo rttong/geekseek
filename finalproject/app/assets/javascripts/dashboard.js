@@ -20,5 +20,10 @@ $(document).ready(function(){
   $('.submenu a').on('ajax:success', function(event,data,xhr){
     $('.content').replaceWith($(data).find(".content"));
   });
+
+  $('.complete_profile').on('ajax:success', function(event,data,xhr){
+    $('.content').replaceWith($(data).find(".content"));
+  });
+
    
 });
