@@ -9,6 +9,7 @@ Finalproject::Application.routes.draw do
   resources :projects do
     get :browse, on: :collection
   end
+  resources :interests
 
   match "/dashboards/:name" => "dashboards#show"
 

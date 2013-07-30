@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730025105) do
+ActiveRecord::Schema.define(:version => 20130730185800) do
 
   create_table "categories", :force => true do |t|
     t.string "category_type"
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(:version => 20130730025105) do
   create_table "causes_organizations", :force => true do |t|
     t.integer "cause_id"
     t.integer "organization_id"
+  end
+
+  create_table "interests", :force => true do |t|
+    t.integer "project_id"
+    t.integer "volunteer_id"
+    t.string  "status",       :default => "Pending"
   end
 
   create_table "organizations", :force => true do |t|
@@ -53,12 +59,6 @@ ActiveRecord::Schema.define(:version => 20130730025105) do
   end
 
   add_index "projects", ["organization_id"], :name => "index_projects_on_organization_id"
-
-  create_table "projects_volunteers", :force => true do |t|
-    t.integer "project_id"
-    t.integer "volunteer_id"
-    t.string  "status",       :default => "Pending"
-  end
 
   create_table "skills", :force => true do |t|
     t.string "skill_type"

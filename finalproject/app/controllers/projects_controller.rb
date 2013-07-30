@@ -12,6 +12,15 @@ class ProjectsController < ApplicationController
     @projects
   end
 
+  def new
+    @project = @organization.projects.build
+  end
+
+  def create
+    @project = @organization.projects.build(params[:project])
+    @project.save
+  end
+
   def browse
     @projects = Project.search(params[:search]) 
     @causes = Cause.all
@@ -22,14 +31,8 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
-  def new
-    @project = @organization.projects.build
-  end
 
-  def create
-    @project = @organization.projects.build(params[:project])
-    @project.save
-  end
+
 
   def edit
   end
