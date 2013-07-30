@@ -1,5 +1,6 @@
 body {
-  margin: 500px;
+  margin: 0;
+/*  margin: 500px;*/
   font-family: "Noto Sans", Arial, Helvetica, sans-serif;
   font-family: 'Oxygen', sans-serif;
   font-size: 14px;
@@ -151,5 +152,19 @@ body {
       width: 300px;
       float: left;
     }
+  }
+}
+
+#copyright_wrapper {
+  width: 100%;
+  background-color: #4b4d57;
+
+  #copyright_container {
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 960px;
+    height: 50px;
+    color: #ccc;
+    text-align: center;
   }
 }
