@@ -1,7 +1,11 @@
 class Project < ActiveRecord::Base
+  validates :title, :summary, :target_date, :importance, presence: true
+
   has_and_belongs_to_many :categories
-  has_many :volunteers, through: :projects_volunteers
+  has_many :volunteers, through: :interests
+  has_many :interests
   belongs_to :organization
+
   attr_accessible  :title, :summary, :target_date, :organizations, :importance, :category_ids, :state, :organization_id
 
   scope :active, -> { where(state: "active") }

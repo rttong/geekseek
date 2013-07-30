@@ -1,12 +1,15 @@
 class User < ActiveRecord::Base
-  
+  validates :email, :password, :password_confirmation, presence: true
+
+ validates_uniqueness_of :email
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :profile_type
   has_one :volunteer, dependent: :destroy
   has_one :organization, dependent: :destroy
-  
+
 
   after_create :generate_volunteer_or_organization
 
