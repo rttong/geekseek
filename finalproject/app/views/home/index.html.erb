@@ -1,8 +1,6 @@
 <div id="carousel_wrapper"> <!-- start carousel_wrapper -->
-
   <div id="fwslider"> <!-- start fwslider -->
     <div class="slider_container"> <!-- start slider_container -->
-
       <div class="slide">
         <%= image_tag '/assets/carousel_01.jpg' %>
         <div class="slide_content">
@@ -14,7 +12,7 @@
         </div>
       </div>
 
-          <div class="slide">
+      <div class="slide">
         <%= image_tag '/assets/carousel_02.jpg' %>
         <div class="slide_content">
           <div class="slide_content_wrap">
@@ -35,44 +33,42 @@
           </div>
         </div>
       </div>
-
     </div> <!-- end slider_container -->
-
     <div class="timers"></div>
     <div class="slidePrev"><span></span></div>
     <div class="slideNext"><span></span></div>
-
   </div> <!-- end fwslider -->
 </div> <!-- end carousel_wrapper -->
 
-    
-<div class="content_wrapper">
+<div id="about_wrapper"> <!-- start about_wrapper -->
+  <div id="about_container"> <!-- start about_container -->
+    GEEKSEEK CONNECTS TECHNOLOGY PROFESSIONALS WITH NON-PROFIT ORGANIZATIONS
+  </div> <!-- end about_container -->
+</div> <!-- end about_wrapper -->
 
-  <div class="inner_content">
+<div id="sign_up_wrapper"> <!-- start sign_up_wrapper -->
+  <div id="sign_up_container"> <!-- start sign_up_container -->
     <div id="sign_up_v">
       <%= render "devise/registrations/sign_up_v" %>
     </div>
 
-
-
-    <div class="sign_up_org">
+    <div id="sign_up_org">
       <%= render "devise/registrations/sign_up_org" %>
     </div>
+  </div> <!-- end sign_up_container -->
+</div> <!-- end sign_up_wrapper -->
 
-  </div>
-</div>
-
-<div id="feature_wrapper">
-  <div class="feature_content">
-    <div class="feature_content_left">
+<div id="feature_wrapper"> <!-- start feature_wrapper -->
+  <div id="feature_container"> <!-- start feature_container -->
+    <div id="feature_left">
       <iframe src="http://player.vimeo.com/video/47532705?title=0&amp;byline=0&amp;portrait=0" width="450" height="253" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
     </div>
 
-    <div class="feature_content_right">
+    <div id="feature_right">
       <div class="text_wrapper">
-      <h3>WELCOME TO GEEKSEEK</h3>
-      GeekSeek brings together developers and designers looking to use their skills to give back to non-profits who need them most. We've made it simple for organizations to post project requests, and our easy to use search functions mean volunteers can find the perfect project in no time. Ready to get started? Click the sign up link above to start your GeekSeek!
+      <h3>FEATURED ORGANIZATION &raquo; CHARITY: WATER</h3>
+      Based in New York City, Charity: Water uses both mainstream and social media platforms to raise awareness, including annual galas and events arranged via Twitter. The initiative has received donations from 50,000 individuals. Dedicated donors cover administrative costs, so donations from the general public go to fund water projects. It provides GPS coordinates and photos of the wells it builds. The organization has 20 full-time staff members, 10 interns and more than 800 volunteers. Charity: Water uses 100% of public donations to fund clean water projects as its operating costs are funded by private donors, foundations and sponsors.
       </div>
     </div>
-  </div>
-</div>
+  </div> <!-- end feature_container -->
+</div> <!-- end feature_wrapper -->

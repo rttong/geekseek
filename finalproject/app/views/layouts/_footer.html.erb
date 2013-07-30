@@ -1,4 +1,4 @@
-<div id="footer_left">
+<div id="footer_left"> <!-- start footer_left -->
 	<h3>GEEKSEEK.ME</h3>
 	<div class="link_line"><%= link_to 'Browse Projects', browse_projects_path  %></div>
   <% if user_signed_in? %>
@@ -16,10 +16,10 @@
         <%= render "devise/sessions/sign_in" %>
       </div>
   <% end %>
-</div>
+</div> <!-- end footer_left -->
 
-<div id="footer_center">
-	<h3>FOLLOW</h3>
+<div id="footer_center"> <!-- start footer_center -->
+	<h3>FOLLOW US</h3>
 
 	<div class="social_line">
 	<%= image_tag '/assets/social_icon_fb.png', class: 'social_icon' %>
@@ -40,11 +40,9 @@
 	<%= image_tag '/assets/social_icon_youtube.png', class: 'social_icon' %>
 	<span class="social_text"><%= link_to 'youtube.com/geekseekme', 'http://www.youtube.com' %></span>
 	</div>
+</div> <!-- end footer_center -->
 
-
-</div>
-
-<div id="footer_right">
-	<h3>LOREM IPSUM</h3>
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-</div>
+<div id="footer_right"> <!-- start footer_right -->
+	<h3>GEEKSEEK</h3>
+	GeekSeek brings together developers and designers looking to use their skills to give back to non-profits who need them most. We've made it simple for organizations to post project requests, and our easy to use search functions mean volunteers can find the perfect project in no time. Ready to get started? Click the sign up link above to start your GeekSeek!
+</div> <!-- end footer_right -->
