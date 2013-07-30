@@ -29,10 +29,10 @@ hunger = Organization.create(org_name: "Stomp Out Hunger", user_id: 2, mission: 
   hunger.cause_ids = hunger.cause_ids.push(2)
 end
 
-zumba_seniors = Organization.create(org_name: "Zumba for Seniors", user_id: 3, mission: "Keeping seniors active, long into their golden years", description: "We offer free zumba classes to seniors.", year_founded: 2010, size: 5, url: "https://www.zumba4srs.com", location: "San Francisco")
+clean_air= Organization.create(org_name: "Clean Air", user_id: 3, mission: "Lobbying for clean air legislature.", description: "We work to promote clean air initiatives by lobbying against large pollution companies and raising funds for programs that further our cause.", year_founded: 2010, size: 5, url: "https://www.cleanair.com", location: "Washington D.C.")
 
 1.times do
-  zumba_seniors.cause_ids = zumba_seniors.cause_ids.push(9)
+  clean_air.cause_ids = clean_air.cause_ids.push(9)
 end
 
 chantal = Volunteer.create(first_name: "Chantal", last_name: "Emmanuel", job_history: "New York Cares 2009 - 2012", phone: "(123) 456- 7890", availability: "4 hours a week" , location: "San Francisco", portfolio_links: "https://www.chantal.com", user_id: 1, linkedin_url: "http://www.linkedin.com/in/chantalemmanuel")
