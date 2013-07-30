@@ -5,10 +5,10 @@
     <li><%= link_to 'PROJECTS', browse_projects_path %></li>
   <% if user_signed_in? %>
     <% if current_user.organization? %>
-      <li><%= link_to 'MY GEEKSEEK', organization_path  %></li>
+      <li><%= link_to 'DASHBOARD', organization_path  %></li>
     <% end %>
     <% if current_user.volunteer? %>
-      <li><%= link_to 'MY GEEKSEEK', volunteer_path %></li>
+      <li><%= link_to 'DASHBOARD', volunteer_path %></li>
     <% end %>
     <li><%= link_to 'LOGOUT', destroy_user_session_path, :method => 'delete' %></li>
   <% else %>
