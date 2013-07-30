@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.content').replaceWith($(data).find('.content'));
   });
 
-  // $(".fancybox").fancybox();
+  $(".fancybox").fancybox();
   // $("#sign_in_form").fancybox();
 });
 
