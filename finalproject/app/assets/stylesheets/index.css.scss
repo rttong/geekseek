@@ -12,17 +12,17 @@
   background-color: #ccc;
 }
 
-#inner_content {
+.inner_content {
 	margin-bottom: 30px;
   width: 960px;
   overflow: hidden;
 
-  #inner_content_left {
+  .inner_content_left {
   	width: 480px;
   	float: left;
   }
 
-  #inner_content_right {
+  .inner_content_right {
   	width: 480px;
   	float: right;
   }
