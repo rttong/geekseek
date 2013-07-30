@@ -11,6 +11,7 @@ $(document).ready(function(){
   });
 
 
+
   $('#signup_v').click( function(e) {
     e.preventDefault();
     $('#signup_form_v').fadeIn();
@@ -34,6 +35,7 @@ $(document).ready(function(){
   $('.carousel').bxSlider();
 
   $(".fancybox").fancybox();
+
 
 });
 
