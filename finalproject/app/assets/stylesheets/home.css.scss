@@ -58,13 +58,14 @@ body {
   }
 }
 
-#content_wrapper {
+.content_wrapper {
+  margin: 30px auto 0 auto;
   width: 100%;
   overflow: hidden;
   background-color: #fff;
 
   #content_container {
-    margin: 160px auto 30px auto;
+    margin: 0 auto 30px auto;
     width: 960px;
     background-color: #fff;
   }

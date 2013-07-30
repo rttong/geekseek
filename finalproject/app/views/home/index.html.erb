@@ -1,39 +1,72 @@
-<div id="image_carousel">
-  <ul class="carousel">
-    <li><%= image_tag '/assets/carousel_01.jpg' %></li>
-    <li><%= image_tag '/assets/carousel_02.jpg' %></li>
-    <li><%= image_tag '/assets/carousel_03.jpg' %></li>
-  </ul>
+<div id="carousel_wrapper">
+  <div id="image_carousel">
+
+    <div id="fwslider"> <!-- start fwslider -->
+      <div class="slider_container"> <!-- start slider_container -->
+
+        <div class="slide">
+          <%= image_tag '/assets/carousel_01.jpg' %>
+          <div class="slide_content">
+            <div class="slide_content_wrap">
+              <h4 class="title">London, United Kingdom</h4>
+              <p class="description">Pellentesque non neque egestas libero. Nam sed porta est. Vestibulum id massa eu odio rhoncus eleifend.</p>
+              <a class="readmore" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <%= image_tag '/assets/carousel_02.jpg' %>
+          <div class="slide_content">
+            <div class="slide_content_wrap">
+              <h4 class="title">London, United Kingdom</h4>
+              <p class="description">Pellentesque non neque egestas libero. Nam sed porta est. Vestibulum id massa eu odio rhoncus eleifend.</p>
+              <a class="readmore" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <%= image_tag '/assets/carousel_03.jpg' %>
+          <div class="slide_content">
+            <div class="slide_content_wrap">
+              <h4 class="title">Chicago, USA</h4>
+              <p class="description">Aenean mi turpis, euismod id auctor. Vestibulum id massa eu odio rhoncus eleifend.</p>
+              <a class="readmore" href="#">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- end slider_container -->
+
+      <div class="timers"></div>
+
+      <div class="slidePrev"><span style="font-size: 50px;">&laquo;</span></div>
+      <div class="slideNext"><span style="font-size: 50px;">&raquo;</span></div>
+
+    </div> <!-- end fwslider -->
+
+  </div>
 </div>
 
-<div class="inner_content">
+<div class="content_wrapper">
+  <div class="inner_content">
+    <div id="sign_up_v">
+      <%= render "devise/registrations/sign_up_v" %>
+    </div>
 
-  <div id="sign_up">
-
-  <div class="field">
-    <%= link_to "Sign up", '#', id: 'sign_up_v' %>
+    <div class="sign_up_org">
+      <%= render "devise/registrations/sign_up_org" %>
+    </div>
   </div>
 
-  <div class="sign_up">
-    <%= render "devise/registrations/sign_up_v" %>
+  <div class="inner_content">
+    <div class="inner_content_left"><%= image_tag '/assets/medium_photo_01.jpg', class: 'medium_photo' %></div>
+
+    <div class="inner_content_right">
+      <h3>Lorem Ipsum</h3>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+    </div>
   </div>
-
-  <div class="field">
-    <%= link_to "Sign up", '#', id: 'sign_up_org' %>
-  </div>
-
-  <div class="sign_up">
-    <%= render "devise/registrations/sign_up_org" %>
-  </div>
-
-</div>
-
-  <div class="inner_content_left"><%= image_tag '/assets/medium_photo_01.jpg', class: 'medium_photo' %></div>
-
-  <div class="inner_content_right">
-    <h3>Lorem Ipsum</h3>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
-  </div>
-
 </div>
 
