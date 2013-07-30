@@ -4,6 +4,16 @@ body {
   font-size: 14px;
   color: #333;
 
+  a {
+    color: #ef697f;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #ef697f;
+    text-decoration: underline;
+  }
+
 }
 
 #header_wrapper {
@@ -11,6 +21,7 @@ body {
   left: 0;
   width: 100%;
   height: 160px;
+  overflow: hidden;
   position: fixed;
   background-image: url('/assets/header_bg.png');
   background-repeat: repeat-x;
@@ -43,45 +54,21 @@ body {
             display: inline;
           }
         }  
-     
     }
   }
 }
 
 #content_wrapper {
   width: 100%;
+  overflow: hidden;
   background-color: #fff;
 
   #content_container {
-    margin: 160px auto 0 auto;
+    margin: 160px auto 30px auto;
     width: 960px;
-    min-height: 600px;
+    /*min-height: 600px;*/
     background-color: #fff;
   }
-}
-
-#sign_up_left {
-  width: 480px;
-  height: 200px;
-  float: left;
-  background-color: #ccc;
-
-  .field{
-    display: inline-block;
-  }
-}
-
-#sign_up_right {
-  width: 480px;
-  height: 200px;
-  float: right;
-  background-color: #ccc;
-}
-
-#inner_content {
-  width: 960px;
-  height: 300px;
-  margin: 0 auto;
 }
 
 #footer_wrapper {
@@ -91,16 +78,38 @@ body {
   background-color: #eee;
 
   #footer_container {
-    margin: 0 auto;
+    margin: 20px auto;
     width: 960px;
 
-    #footer_left { 
-      width: 33%;
+    #footer_left {
+      margin-right: 30px; 
+      width: 300px;
       float: left;
+
+      .link_line {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        height: 24px;
+        border-bottom: 1px dotted #ccc;
+        line-height: 24px;
+
+        a {
+          color: #35b7cc;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #51b1ad;
+          text-decoration: underline;
+          transition:0.5s;
+          -webkit-transition:0.5s;
+        }
+      }
     }
 
     #footer_center {
-      width: 34%;
+      margin-right: 30px;
+      width: 300px;
       float: left;
 
       .social_line {
@@ -114,21 +123,23 @@ body {
           margin-left: 10px;
         }
 
+        a {
+          color: #35b7cc;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #51b1ad;
+          text-decoration: underline;
+          transition:0.5s;
+          -webkit-transition:0.5s;
+        }
       }
-
-
     }
 
     #footer_right {
-      width: 33%;
+      width: 300px;
       float: left;
-      background-color: #ff0;
-    }
-
-    #copyright {
-      margin: 30px 0;
-      width: 960px;
-      clear: both;
     }
   }
 }
