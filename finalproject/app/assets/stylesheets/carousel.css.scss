@@ -1,11 +1,18 @@
-#image_carousel{
-  height: 600px;
+#carousel_wrapper {
+	margin: 150px auto 0 auto;
   width: 100%;
-  background-color: #444;
+  overflow: hidden;
+  background-color: #ff0;
+}
+
+#image_carousel{
+	margin: 0 auto;
+  width: 100%;
+  height: 500px;
   margin: 0 auto;
 
   .image_container {
-    width: 500px;
-    height: 300px;
+    width: 100%;
+    height: 500px;
   }
 }
