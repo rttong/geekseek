@@ -1,4 +1,5 @@
-<div id="sign_in_form">
+<div id="sign_in_form" style='display: none'>
+
     <a href="#" id="sign_in_close">Close [X]</a><br><br>
     <%= simple_form_for(User.new, :as => :user, :url => session_path(:user)) do |f| %>
     <div class="form-inputs">
