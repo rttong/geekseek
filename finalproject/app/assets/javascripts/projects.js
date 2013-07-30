@@ -4,6 +4,5 @@ $(document).ready(function(){
   });
 
   $(".fancybox").fancybox();
-  // $("#sign_in_form").fancybox();
+  
 });
-
