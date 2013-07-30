@@ -85,7 +85,8 @@ body {
   }
 }
 
-.content_wrapper {
+
+#content_wrapper {
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
@@ -95,8 +96,20 @@ body {
     margin: 180px auto 30px auto;
     width: 960px;
     min-height: 800px;
+    overflow: hidden;
+
+    #content_left {
+      width: 300px;
+      float: left;
+    } 
+    
+    #content_right {
+      width: 660px;
+      float: right;
+    }  
   }
 }
+
 
 #footer_wrapper {
   width: 100%;

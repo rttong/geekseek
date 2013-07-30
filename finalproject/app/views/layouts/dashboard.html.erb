@@ -17,21 +17,25 @@
   </div> <!-- end header_container -->
 </div> <!-- end header_wrapper -->
 
-<div class="content_wrapper">
+
+<div id="content_wrapper">
   <div id="content_container">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <div id="<%= current_user.profile_type %>_menu">
-      <%= render "layouts/#{current_user.profile_type}_menu" %>
-    </div>
+    <div id="content_left"> <!-- start content_left -->
+      <div id="<%= current_user.profile_type %>_menu">
+        <%= render "layouts/#{current_user.profile_type}_menu" %>
+      </div>
+    </div> <!-- end content_left -->
     
-    <div class="content_right">
+    <div id="content_right"> <!-- start content_right -->
       <%= yield %>
-    </div>
+    </div> <!-- end content_right -->
 
   </div> <!-- end content_container -->
 </div> <!-- end content_wrapper -->
+
 
 <div id="footer_wrapper"> <!-- start footer_wrapper -->
   <div id="footer_container"> <!-- start footer_container -->
