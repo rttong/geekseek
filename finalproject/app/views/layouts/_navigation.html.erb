@@ -21,7 +21,8 @@
 
     <ul>
       <li>
-        <%= link_to 'Sign In', new_user_session_path, :id => 'sign_in_button' %>
+
+        <%= link_to 'Sign In', "#sign_in_form", :id => 'sign_in_button', class: "fancybox" %>
         <%= render "devise/sessions/sign_in" %>
       </li>
     </ul>
