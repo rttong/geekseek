@@ -1,5 +1,21 @@
 <div id="footer_left">
-	Change me
+	<h3>GeekSeek.me</h3>
+	<div class="link_line"><%= link_to 'Browse Projects', browse_projects_path  %></div>
+  <% if user_signed_in? %>
+      <% if current_user.organization? %>
+        <div class="link_line"><%= link_to 'View Dashboard', organization_path  %></div>
+      <% end %>
+
+      <% if current_user.volunteer? %>
+        <div class="link_line"><%= link_to 'View Dashboard', volunteer_path %></div>
+      <% end %>
+
+      <div class="link_line"><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></div>
+  <% else %>
+      <div class="link_line"><%= link_to 'Sign In', new_user_session_path, :id => 'sign_in_button' %>
+        <%= render "devise/sessions/sign_in" %>
+      </div>
+  <% end %>
 </div>
 
 <div id="footer_center">
@@ -29,10 +45,6 @@
 </div>
 
 <div id="footer_right">
-<h3>GeekSeek.me</h3>
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-</div>
-
-<div id="copyright">
-	Copyright &copy; MMXIII, GeekSeek.me. All rights reserved.
+	<h3>Lorem Ipsum</h3>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
 </div>

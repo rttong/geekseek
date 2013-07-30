@@ -1,32 +1,38 @@
-    <div id="image_carousel">
-      <ul class="carousel">
-        <li><%= image_tag '/assets/carousel_01.jpg' %></li>
-        <li><%= image_tag '/assets/carousel_02.jpg' %></li>
-        <li><h2 style="color:#fff;">HI!</h2></li>
-        <li><%= image_tag '/assets/carousel_03.jpg' %></li>
-      </ul>
-    </div>
+<div id="image_carousel">
+  <ul class="carousel">
+    <li><%= image_tag '/assets/carousel_01.jpg' %></li>
+    <li><%= image_tag '/assets/carousel_02.jpg' %></li>
+    <li><h2 style="color:#fff;">HI!</h2></li>
+    <li><%= image_tag '/assets/carousel_03.jpg' %></li>
+  </ul>
+</div>
 
-    <div id="sign_up">
+<div id="sign_up">
 
-      <div class="field">
-      <%= link_to "Sign up", '#', id: 'signup_v' %>
-      </div>
+  <div class="field">
+    <%= link_to "Sign up", '#', id: 'signup_v' %>
+  </div>
 
-      <div class="sign_up">
-        <%= render "devise/registrations/signup_v" %>
-      </div>
+  <div class="sign_up">
+    <%= render "devise/registrations/signup_v" %>
+  </div>
 
-      <div class="field">
-      <%= link_to "Sign up", '#', id: 'signup_org' %>
-      </div>
+  <div class="field">
+    <%= link_to "Sign up", '#', id: 'signup_org' %>
+  </div>
 
-      <div class="sign_up">
-        <%= render "devise/registrations/signup_org" %>
-      </div>
-    </div>
+  <div class="sign_up">
+    <%= render "devise/registrations/signup_org" %>
+  </div>
+</div>
 
-    <div id="inner_content">
-    	other content
-    </div>
+<div id="inner_content">
+
+  <div id="inner_content_left"><%= image_tag '/assets/home_01.jpg', class: 'home_photo' %></div>
+  <div id="inner_content_right">
+    <h3>Lorem Ipsum</h3>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+  </div>
+	
+</div>
 
