@@ -1,5 +1,5 @@
 #carousel_wrapper {
-  margin: 160px auto 0 auto;
+  margin: 150px auto 0 auto;
   width: 100%;
   overflow: hidden;
 }
@@ -27,5 +27,35 @@
   .inner_content_right {
   	width: 480px;
   	float: right;
+  }
+}
+
+#feature_wrapper {
+  margin: 150px auto 0 auto;
+  width: 100%;
+  overflow: hidden;
+  background-color: #35b7cc;
+}
+
+.feature_content {
+  margin: 30px auto;
+  width: 960px;
+  height: 253px;
+  overflow: hidden;
+  background-color: #b6f5ff;
+
+  .feature_content_left {
+    width: 450px;
+    float: left;
+  }
+
+  .feature_content_right {
+    width: 510px;
+    float: right;
+
+    .text_wrapper {
+      width: 470px;
+      margin: 20px;
+    }
   }
 }
