@@ -29,3 +29,26 @@
   	float: right;
   }
 }
+
+#feature_wrapper {
+  margin: 150px auto 0 auto;
+  width: 100%;
+  overflow: hidden;
+  background-color: #35b7cc;
+}
+
+.inner_content {
+  margin: 30px auto;
+  width: 960px;
+  overflow: hidden;
+
+  .inner_content_left {
+    width: 480px;
+    float: left;
+  }
+
+  .inner_content_right {
+    width: 480px;
+    float: right;
+  }
+}
