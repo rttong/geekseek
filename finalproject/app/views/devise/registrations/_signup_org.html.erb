@@ -1,19 +1,11 @@
-<div id="signup_form_org">
-  <a href="#" id="signup_org_close">Close [X]</a>
-
+<div id="sign_up_form_org">
+  <h2>Register Organization</h2>
   <%= simple_form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
     <%= f.error_notification %>
-
-    <div class="form-inputs">
-      <%= f.input :email, :required => true, :autofocus => true %>
-      <%= f.input :password, :required => true %>
-      <%= f.input :password_confirmation, :required => true %>
-      <%= f.hidden_field :profile_type, :value => "organization" %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
+    <%= f.input :email, label: false, placeholder: 'e-mail address', :required => true, :autofocus => true %>
+    <%= f.input :password, label: false, placeholder: 'password', :required => true %>
+    <%= f.input :password_confirmation, label: false, placeholder: 'password confirmation', :required => true %>
+    <%= f.hidden_field :profile_type, :value => "organization" %>
+    <%= f.button :submit, "get involved" %>
   <% end %>
-
 </div>

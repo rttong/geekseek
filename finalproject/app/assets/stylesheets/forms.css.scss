@@ -1,15 +1,40 @@
-#sign_in_form{
-  display:none;
-  border: 1px solid;
+#sign_in_form {
+  border: 1px solid #ccc;
   background-color: #ccc;
 }
 
-#user_type {
-	display: none;
-}
+#sign_up_form_v,
+#sign_up_form_org {
+	margin-top: 30px;
 
-#signup_form_v, #signup_form_org{
-  display:none;
-  width:400px;
-  margin: 2px;
+	input {
+		margin-bottom: 10px;
+		padding-left: 10px;
+		width: 430px;
+		height: 40px;
+		border: 1px solid #eee;
+		border-radius: 8px;
+		font-size: 18px;
+	}
+
+	input:hover {
+		border: 1px solid #35b7cc;
+	}
+
+	.button {
+		box-sizing:content-box;
+ 		-moz-box-sizing:content-box;
+		padding: 5px;
+		width: 430px;
+		height: 40px;
+		border: 1px solid #eee;
+		background-color: #51b1ad;
+		cursor: pointer;
+	}
+
+	.button:hover {
+		background-color: #35b7cc;
+		transition:0.5s;
+    -webkit-transition:0.5s;
+	}
 }
