@@ -3,11 +3,48 @@
   <div id="apply">
     <%= link_to "I'm interested in this project", '#' , id: 'interested' %>
   </div>
+
+  <div id="project_stats">
+    <%= @project.title %> <br>
+    Completion Date: <%= @project.target_date %> <br>
+    Project Details: <%= @project.summary %> <br>
+    Why is this important to the organization: <%= @project.importance %> <br>
+    Category: <br>
+    <% if @project.categories %>
+    <% @project.categories.each do |category| %>
+    <%= category.category_type %> <br>
+    <% end %>
+    <% end %>
+  </div>
 </div>
 
-<div id="org_info">
-  organization info for this project
-</div>
+<p>
+  <div id="org_stats">
+
+    <h2>Organization Stats</h2>
+    <%= image_tag @project.organization.avatar.to_s %> <br>
+    Organization Name: <%= @project.organization.org_name %> <br>
+    Organization location: <%= @project.organization.location %> <br>
+    Year Founded: <%= @project.organization.year_founded %> <br>
+    Size: <%= @project.organization.size %> employees <br>
+    Cause(s): <br>
+    <% if @project.organization.causes %>
+    <% @project.organization.causes.each do |cause| %>
+    <%= cause.cause_type %> <br>
+    <% end %>
+    <% end %>
+  </div>
+</p>
+
+<p>
+  <div id="org_info">
+    <h2>Organization Info</h2>
+
+    Mission: <%= @project.organization.mission %> <br>
+    Program Description: <%= @project.organization.description %> <br>
+
+  </div>
+</p>
 
 <div id="related_projects">
   related projects
