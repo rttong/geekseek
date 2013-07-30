@@ -1,9 +1,15 @@
 <h2>Register Organization</h2>
-<%= simple_form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
-  <%= f.error_notification %>
-  <%= f.input :email, label: false, placeholder: 'e-mail address', :required => true, :autofocus => true %>
-  <%= f.input :password, label: false, placeholder: 'password', :required => true %>
-  <%= f.input :password_confirmation, label: false, placeholder: 'password confirmation', :required => true %>
-  <%= f.hidden_field :profile_type, :value => "organization" %>
-  <%= f.button :submit, "get involved" %>
-<% end %>
+<div id="signup_form_org">
+
+  <%= simple_form_for(User.new, :as => :user, :url => registration_path(:user)) do |f| %>
+    <%= f.error_notification %>
+    <%= f.input :email, label: false, placeholder: 'e-mail address', :required => true, :autofocus => true %>
+    <%= f.input :password, label: false, placeholder: 'password', :required => true %>
+    <%= f.input :password_confirmation, label: false, placeholder: 'password confirmation', :required => true %>
+    <%= f.hidden_field :profile_type, :value => "organization" %>
+    <div class="form-actions">
+      <%= f.button :submit, "get involved" %>
+    </div>  
+  <% end %>
+
+</div>
