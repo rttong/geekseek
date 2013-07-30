@@ -19,6 +19,7 @@ Project.create(title: "Create Our New Logo", summary: "We changed our name and n
 Project.create(title: "Update our Website", summary: "After going through our whole budget our developer bailed halfway through doing our website redesign.  ", target_date: "Mon, 29 Jul 2014", organization_id: 3, importance: "Our website doesn't reflect who we are as an organization and I feel like we're missing out on ", state: "active")
 
 project_blue = Organization.create(org_name: "Project Blue", user_id: 1, mission: "The oceans make up 70% of our Earth, providing us with sustenance, beauty and much more.  It our mission at Project Blue to do everything we can to keep it clean for future generations", description: "We partner with schools in beachside communities to lead educational programs for children and adults to teach them about the importance of and methods to keep our oceans clean.", year_founded: 1987, size: 22, url: "https://www.projectblue.com", location: "Ocean City, MD")
+
 1.times do
   project_blue.cause_ids = project_blue.cause_ids.push(3)
 end
