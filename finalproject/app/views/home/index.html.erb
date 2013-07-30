@@ -1,39 +1,73 @@
-<div id="image_carousel">
-  <ul class="carousel">
-    <li><%= image_tag '/assets/carousel_01.jpg' %></li>
-    <li><%= image_tag '/assets/carousel_02.jpg' %></li>
-    <li><%= image_tag '/assets/carousel_03.jpg' %></li>
-  </ul>
-</div>
+<div id="carousel_wrapper"> <!-- start carousel_wrapper -->
 
-<div class="inner_content">
+  <div id="fwslider"> <!-- start fwslider -->
+    <div class="slider_container"> <!-- start slider_container -->
 
-  <div id="sign_up">
+      <div class="slide">
+        <%= image_tag '/assets/carousel_01.jpg' %>
+        <div class="slide_content">
+          <div class="slide_content_wrap">
+            <h4 class="title">Project Blue</h4>
+            <p class="description">Get involved and help Project Blue keep the ocean clean.</p>
+            <a class="readmore" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= link_to "Sign up", '#', id: 'sign_up_v' %>
+      <div class="slide">
+        <%= image_tag '/assets/carousel_02.jpg' %>
+        <div class="slide_content">
+          <div class="slide_content_wrap">
+            <h4 class="title">Stomp Out Hunger</h4>
+            <p class="description">Join Stomp Out Hunger in the fight against starvation.</p>
+            <a class="readmore" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <%= image_tag '/assets/carousel_03.jpg' %>
+        <div class="slide_content">
+          <div class="slide_content_wrap">
+            <h4 class="title">Clean Air</h4>
+            <p class="description">Keep earth green through Clean Air's partnership with Geek Seek.</p>
+            <a class="readmore" href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end slider_container -->
+
+    <div class="timers"></div>
+    <div class="slidePrev"><span></span></div>
+    <div class="slideNext"><span></span></div>
+
+  </div> <!-- end fwslider -->
+</div> <!-- end carousel_wrapper -->
+
+<div class="content_wrapper">
+  <div class="inner_content">
+    <div id="sign_up_v">
+      <%= render "devise/registrations/sign_up_v" %>
+    </div>
+
+
+
+    <div class="sign_up_org">
+      <%= render "devise/registrations/sign_up_org" %>
+    </div>
+
   </div>
 
-  <div class="sign_up">
-    <%= render "devise/registrations/sign_up_v" %>
+  <div class="inner_content">
+    <div class="inner_content_left">
+      <iframe src="http://player.vimeo.com/video/47532705?title=0&amp;byline=0&amp;portrait=0" width="450" height="253" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+
+    <div class="inner_content_right">
+      <h3>Welcome to GeekSeek</h3>
+      GeekSeek brings together Developers and Designs looking to use their skills to give back, with non-profits who need them most.  We've made it simple for organizations to post a technology request and our easy to use search functions means volunteers can find the perfect project in no time.  Ready to get started?  Click the sign up link above to start your GeekSeek!
+    </div>
   </div>
-
-  <div class="field">
-    <%= link_to "Sign up", '#', id: 'sign_up_org' %>
-  </div>
-
-  <div class="sign_up">
-    <%= render "devise/registrations/sign_up_org" %>
-  </div>
-
-</div>
-
-  <div class="inner_content_left"><%= image_tag '/assets/medium_photo_01.jpg', class: 'medium_photo' %></div>
-
-  <div class="inner_content_right">
-    <h3>Welcome to GeekSeek</h3>
-    GeekSeek brings together Developers and Designs looking to use their skills to give back, with non-profits who need them most.  We've made it simple for organizations to post a technology request and our easy to use search functions means volunteers can find the perfect project in no time.  Ready to get started?  Click the sign up link above to start your GeekSeek!
-  </div>
-
 </div>
 
