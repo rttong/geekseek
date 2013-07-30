@@ -25,11 +25,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-
-gem 'jquery-rails'
-
- gem "better_errors"
-
 group :test, :development do
  gem 'rb-fsevent', '~> 0.9'
  gem 'rspec-rails'
