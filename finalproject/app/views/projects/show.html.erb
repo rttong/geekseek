@@ -50,13 +50,17 @@
   related projects
 </div>
 
-<div id='apply' >
-  <% if user_signed_in? %>
-    <h2>MOTHERFUCKING APPLY</h2>
-  <% else %>
-    <p>Please sign up:</p>
-    <%= link_to 'Sign In', "#sign_in_form", :id => 'sign_in_button', class: "fancybox" %>
-    <p>or</p>
-    <%= render '/devise/registrations/sign_up_v' %>
-  <% end %>
+
+<div id="apply">
+<% if user_signed_in? %>
+  <h2>MOTHERFUCKING APPLY</h2>
+<% else %>
+  <p>Please sign up:</p>
+  <%= link_to 'Sign In', "#sign_in_form", :id => 'sign_in_button', class: "fancybox" %>
+  <p>or</p>
+  <%= render '/devise/registrations/sign_up_v' %>
+<% end %>
 </div>
+
+
+
