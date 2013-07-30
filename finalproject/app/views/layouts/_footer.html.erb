@@ -12,7 +12,7 @@
 
       <div class="link_line"><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></div>
   <% else %>
-      <div class="link_line"><%= link_to 'Sign In', new_user_session_path, :id => 'sign_in_button' %>
+      <div class="link_line"><%= link_to 'Sign In', new_user_session_path, :class => 'sign_in_button' %>
         <%= render "devise/sessions/sign_in" %>
       </div>
   <% end %>
