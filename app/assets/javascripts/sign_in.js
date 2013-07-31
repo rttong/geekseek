@@ -10,8 +10,6 @@ $(document).ready(function(){
     $('#sign_in_form').fadeOut();
   });
 
-
-
   $('#signup_v').click( function(e) {
     e.preventDefault();
     $('#signup_form_v').fadeIn();
@@ -31,11 +29,8 @@ $(document).ready(function(){
     e.preventDefault();
     $('#signup_form_org').fadeOut();
   });
-  
-  $('.carousel').bxSlider();
 
   $(".fancybox").fancybox();
-
 
 });
 

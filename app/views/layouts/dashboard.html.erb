@@ -25,15 +25,14 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <!-- <div id="content_left"> --> <!-- start content_left -->
+    <div id="content_left"> <!-- start content_left -->
       <div id="<%= current_user.profile_type %>_menu">
         <%= render "layouts/#{current_user.profile_type}_menu" %>
       </div>
-    <!-- </div> --> <!-- end content_left -->
+    </div> <!-- end content_left -->
 
 
     <div id="content_right"> <!-- start content_right -->
-
       <%= yield %>
     </div> <!-- end content_right -->
 
