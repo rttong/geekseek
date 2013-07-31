@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'puma'
 
-# Bundle edge Rails instead :
+# Bundle edge Rails instead:
+
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
@@ -26,6 +27,7 @@ end
 
 group :test, :development do
  gem 'rb-fsevent', '~> 0.9'
+ gem "rspec"
  gem 'rspec-rails'
  gem 'rspec'
  gem 'shoulda'
