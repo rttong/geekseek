@@ -54,11 +54,15 @@
 <div id="apply">
   <% if user_signed_in? %>
     <% if current_user.volunteer.present? %>
-      <p>Send a message to <%= @project.organization.org_name %>:</p>
+      <p>Your application has been sumbitted. <br>
+        Please include a short message to <%= @project.organization.org_name %>:</p>
+
       <%= simple_form_for @project.interests.build, remote: true do |f| %>
         <%= f.hidden_field :project_id, value: @project.id %>
-        <%= f.text_field :message %>
-        <%= f.button :submit , id:'apply_submit' %>
+        <%= f.text_field :message %><br>
+        <%= f.submit "Send" , id:'apply_submit', class: 'fancybox' %>
+        <!-- Como lo hago para cerrar la ventana? -->
+        <!-- Donde pongo el metodo para avisarle al usuario? -->
       <% end %>
     <% else %>
       <%= render "volunteers/form", :volunteer => current_user.build_volunteer, :project_id => @project.id, :options => {} %>
