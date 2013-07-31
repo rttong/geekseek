@@ -1,5 +1,4 @@
-<h1>Projects</h1>
-
+<h1>Active Projects</h1>
 
 <div class="projects">
   <% @projects.each do |project| %>
@@ -8,8 +7,8 @@
       <% project.volunteers.each do |volunteer|%>
         <%= link_to "#{volunteer.full_name}", volunteer_path(volunteer) %>
         <%= mail_to "#{volunteer.user.email}", name = "Email" %>
-        <%= link_to "Accept", "#" %>
-         <%= link_to "Deny", "#" %> <br>
+        <%= link_to "Accept", interest_path(project.interest_for(volunteer), :status => 'accepted'), :method => :put %>
+         <%= link_to "Deny",  interest_path(project.interest_for(volunteer), :status => 'deny'), :method => :put %> <br>
       <% end %>
   <% end %>
 </div>
