@@ -3,7 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'puma'
 
+<<<<<<< HEAD
 # Bundle edge Rails instead:
+=======
+# Bundle edge Rails instead :
+>>>>>>> 9fe92f91aa8a8d56c0ef687c0f62a6d5a3218c8f
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
