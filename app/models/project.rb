@@ -24,4 +24,8 @@ class Project < ActiveRecord::Base
     self.interests.where(:volunteer_id => volunteer.id).first
   end
 
+  def active?
+    self.state == 'active'
+  end
+
 end
