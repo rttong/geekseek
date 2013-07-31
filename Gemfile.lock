@@ -228,10 +228,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 3.2.13)
   rb-fsevent (~> 0.9)
-<<<<<<< HEAD
   rspec
-=======
->>>>>>> 9fe92f91aa8a8d56c0ef687c0f62a6d5a3218c8f
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda
