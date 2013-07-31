@@ -22,4 +22,12 @@ class InterestsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @interest = Interest.find params[:id]
+    @interest.update_attributes(:status => params[:status])
+  end
+
 end
