@@ -1,19 +1,14 @@
 /*------------------------------------------------------------------------
-
         Name: Full Width Slider 2.0
         Design and Develpment: eightyclouds
         Author URI: http://www.eightyclouds.com
         Version: 1.0
-
 --------------------------------------------------------------------------
-
    01. CSS Reset
    02. Slider Styles
    03. Media Query Max Width 1300, Min Width 720
    04. Media Query Max Width 719
-   
 */
-
 /* ------------------------------- 2. Slider Styles ------------------------------- */
 
 #fwslider {
@@ -100,7 +95,7 @@
 #fwslider .timer {
     height:4px;
     width:40px;
-    background-color: #222;
+    background-color: #fe8af6;
     float:left;
     margin-right: 10px;
 }
@@ -113,8 +108,8 @@
 }
 
 #fwslider .slide_content {
-    top:0;
-    left:0;
+    top:60%;
+    left:20%;
     position: absolute;
     width:100%;
     height:100%;
@@ -130,72 +125,48 @@
 }
 
 #fwslider .title {  /* Slider Title Style */
-    background:#A66262;
-    border:1px solid #A66262;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2), inset 0 0 15px rgba(0,0,0,0.15);
+    background:#333;
     color:#fff;
-    float:right;
-    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+    float:left;
     font-size:30px;
-    opacity: 0;
-    padding:10px 30px;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
-    text-transform:uppercase;
+    padding:10px;
 }
 
 #fwslider .description { /* Slider Description Style */
-    background:#fff;
-    border:1px solid #fff;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2), inset 0 0 40px rgba(0,0,0,0.15);
+    background:#4b4d57;
     clear:both;
-    color:#222;
-    float:right;
-    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+    color:#fff;
+    float:left;
     font-size:20px;
-    opacity: 0;
-    padding:10px 30px;
-    text-shadow: 0 1px 0 #fff;
-    text-transform:uppercase;
+    padding:10px;
 }
 
 #fwslider .readmore { /* Slider Read More button Style */
     background:#222;
-    border:1px solid #222;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2), inset 0 0 40px rgba(0,0,0,0.2);
     clear:both;
-    color:#fff;
-    float:right;
-    font-family: "PT Serif", Georgia, "Times New Roman", Times, serif;
+    color:#fe8af6;
+    float:left;
     font-size:20px;
-    opacity: 0;
-    padding:10px 30px;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
-    text-transform:uppercase;
+    padding:10px;
 }
 
 #fwslider .readmore:hover {
-    color:#A66262;
+    color:#ccc;
     text-decoration:none;
 }
 
 /* ------------------------------- 3. Media Query Max Width 1300, Min Width 720 ------------------------------- */
 
-
-
 @media only screen and (min-width:720px) and (max-width: 1300px) {
-
-    #fwslider .slide_content_wrap { margin-right:30px; margin-top:30%;}
-    #fwslider .title { font-size:24px; }
-    #fwslider .description {  font-size:16px;}
-
+  #fwslider .slide_content_wrap { margin-right:30px; margin-top:30%;}
+  #fwslider .title { font-size:24px; }
+  #fwslider .description {  font-size:16px;}
 }
 
 /* ------------------------------- 4. Media Query Max Width 719 ------------------------------- */
 
 @media only screen and (max-width:719px) {
-
-    #fwslider .slide_content_wrap { display:none; }
-    #fwslider .timers { display:none; }
-    #fwslider .slide_content {cursor: pointer;}
-
+  #fwslider .slide_content_wrap { display:none; }
+  #fwslider .timers { display:none; }
+  #fwslider .slide_content {cursor: pointer;}
 }
