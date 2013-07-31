@@ -1,0 +1,35 @@
+#sign_in_form {
+  border: 1px solid #ccc;
+  display: none;
+}
+
+input {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 428px;
+	height: 30px;
+	border: 1px solid #eee;
+	border-radius: 8px;
+	font-size: 18px;
+}
+
+input:hover {
+	border: 1px solid #ccc;
+}
+
+.button {
+	box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	width: 428px;
+	height: 30px;
+	border: 1px solid #eee;
+	background-color: #ccc;
+	cursor: pointer;
+	color: #fff;
+}
+
+.button:hover {
+	background-color: #ddd;
+	transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
