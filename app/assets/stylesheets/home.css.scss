@@ -1,7 +1,7 @@
 body {
   font-family: "Noto Sans", Arial, Helvetica, sans-serif;
-  // margin: 0;
-  margin: 200px;
+  margin: 0;
+  /*margin: 200px;*/
   font-family: 'Oxygen', sans-serif;
   font-size: 14px;
   line-height: 19px;
@@ -36,8 +36,10 @@ body {
 
     #logo{
       width: 50%;
+      height: 150px;
       float: left;
-      line-height: 100px;
+      line-height: 150px;
+      font-size: 35px;
     }
 
     #menu {
@@ -57,13 +59,11 @@ body {
 
         li {
           margin: 0 30px 0 0;
-          /*width: 120px;*/
           height: 150px;
           line-height: 150px;
           display: inline-block;
 
           a {
-            /*width: 150px;*/
             height: 130px;
             display: inline-block;
             border-bottom: 20px solid #ef697f;
@@ -84,34 +84,6 @@ body {
     }
   }
 }
-
-
-#content_wrapper {
-  margin: 0 auto;
-  width: 100%;
-  overflow: hidden;
-  background-color: #fff;
-
-  #content_container {
-    margin: 180px auto 30px auto;
-    width: 960px;
-    min-height: 800px;
-    overflow: hidden;
-
-    #content_left {
-      width: 300px;
-      min-height: 500px;
-      float: left;
-      background-color: #333;
-    } 
-    
-    #content_right {
-      width: 660px;
-      float: right;
-    }  
-  }
-}
-
 
 #footer_wrapper {
   width: 100%;

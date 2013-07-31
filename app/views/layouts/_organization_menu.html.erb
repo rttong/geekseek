@@ -1,16 +1,15 @@
-<ul>
+<ul class='dash_menu'>
   <li class='one' class='picture'>PICTURE</li>
-  <li class='two' class='profile'><%= link_to "Profile", "#", id: 'profile_button', remote: true %>
+  <li class='two' class='profile'><%= link_to "// PROFILE", "#", id: 'profile_button', remote: true %>
     <ul class='submenu'>
       <li><%= link_to 'Edit Account', edit_organization_path, remote: true %></li>
-      <li><%= link_to 'Change Email/Password', edit_user_registration_path, remote: true %></li>
     </ul>
   </li>
-  <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
+  <li class='three' class='projects'><%= link_to "// PROJECTS", '#', id: 'projects_button' %>
     <ul class='submenu'>
-      <li><%= link_to "Create New Project",  new_project_path, remote: true %></li>
-      <li><%= link_to "Manage Current Projects", projects_path(state: "active"), remote: true %></li>
-      <li><%= link_to "View Completed Projects", projects_path(state: "completed"), remote: true %></li>
+      <li><%= link_to "New Project",  new_project_path, remote: true %></li>
+      <li><%= link_to "Current Projects", projects_path(state: "active"), remote: true %></li>
+      <li><%= link_to "Completed Projects", projects_path(state: "completed"), remote: true %></li>
     </ul>
   </li>
 </ul>
