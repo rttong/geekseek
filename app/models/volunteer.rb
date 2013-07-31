@@ -5,6 +5,10 @@ class Volunteer < ActiveRecord::Base
   has_and_belongs_to_many :skills
   has_many :projects, through: :interests
   has_many :interests
+
+  has_many :pending_interests, class_name: "Interest", conditions: {status: "Pending"}
+  has_many :pending_projects, through: :pending_interests, source: :project
+
   belongs_to :user
   accepts_nested_attributes_for :skills
 

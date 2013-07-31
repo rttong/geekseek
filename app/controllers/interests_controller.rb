@@ -1,5 +1,9 @@
 class InterestsController < ApplicationController  
 
+  def index
+    @projects = current_user.volunteer.pending_projects
+  end
+
   def new
     @interest = Interest.new
   end
