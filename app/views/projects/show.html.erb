@@ -1,7 +1,11 @@
 <div id="project_info">
   Project info
   <div>
-    <%= link_to "I'm interested in this project", "#apply", class: "fancybox", id: 'interested' unless current_user.volunteer_for?(@project) %>
+    <% if current_user.volunteer_for?(@project) %>
+      You have already applied for this project
+    <% else %>
+      <%= link_to "I'm interested in this project", "#apply", class: "fancybox", id: 'interested' %>
+    <% end %>
   </div>
 
   <div id="project_stats">
@@ -54,11 +58,15 @@
 <div id="apply">
   <% if user_signed_in? %>
     <% if current_user.volunteer.present? %>
-      <p>Send a message to <%= @project.organization.org_name %>:</p>
-      <%= simple_form_for @project.interests.build, remote: true do |f| %>
+      <p>Your application has been sumbitted. <br>
+        Please include a short message to <%= @project.organization.org_name %>:</p>
+
+      <%= simple_form_for @project.interests.build do |f| %>
         <%= f.hidden_field :project_id, value: @project.id %>
-        <%= f.text_field :message %>
-        <%= f.button :submit , id:'apply_submit' %>
+        <%= f.text_field :message %><br>
+        <%= f.submit "Send" , id:'apply_submit' %>
+        <!-- Como lo hago para cerrar la ventana? -->
+        <!-- Donde pongo el metodo para avisarle al usuario? -->
       <% end %>
     <% else %>
       <%= render "volunteers/form", :volunteer => current_user.build_volunteer, :project_id => @project.id, :options => {} %>
