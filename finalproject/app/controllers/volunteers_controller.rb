@@ -12,7 +12,12 @@ class VolunteersController < ApplicationController
 
   def create
     @volunteer.attributes = params[:volunteer]
-    @volunteer.save
+    if @volunteer.save
+      project = Project.find_by_id params[:project_id]
+      @volunteer.for_project(project) and redirect_to(project) if project
+    else
+      render :new
+    end
   end
 
   def edit

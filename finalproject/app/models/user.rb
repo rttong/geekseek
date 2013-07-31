@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   validates :email, :password, :password_confirmation, presence: true
 
- validates_uniqueness_of :email
+  validates_uniqueness_of :email
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     else
       self.create_organization
     end
+  end
+
+  def volunteer_for? project
+    self.volunteer.projects.include? project
   end
 
   def volunteer?

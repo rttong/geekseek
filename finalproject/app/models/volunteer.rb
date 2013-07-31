@@ -11,4 +11,8 @@ class Volunteer < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def for_project project
+    self.projects << pro
+  end
 end

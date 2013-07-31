@@ -1,13 +1,14 @@
-<%= simple_form_for @volunteer, url: volunteer_path, remote: true do |f| %>
+<% project_id ||= nil %>
+<% options[:url]  = volunteer_path %>
+<%= simple_form_for volunteer, options do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
   <%= f.input :availability %>
   <%= f.text_area :job_history %>
-  <%= f.input :availability %>
   <%= f.input :location %>
   <%= f.input :linkedin_url %>
   <%= f.input :portfolio_links %>
-
+  <%= hidden_field_tag :project_id, project_id %>
   <%= f.association :skills, :label_method => lambda { |skill| "#{skill.skill_type}" }, as: :check_boxes %>
 
   <%= f.button :submit, id: 'update_profile_button' %>
