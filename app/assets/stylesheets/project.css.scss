@@ -43,6 +43,16 @@
       #project_menu {
         width: 300px;
         background-color: #eee;
+
+        #search_form {
+          .checkbox {
+            background-color: red;
+          }
+
+          .input {
+            width: 300px;
+          }
+        }
       }
     } 
     

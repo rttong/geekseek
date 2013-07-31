@@ -1,15 +1,12 @@
 <%= form_tag browse_projects_path, method: "get", remote: true, id: 'search_form' do %>
-
-  <h2>Causes</h2> 
+  <h2>CAUSES</h2> 
   <% @causes.each do |cause| %>
-    <%= check_box_tag "search[cause_ids][]", cause.id %> <%= cause.cause_type %>
+    <%= check_box_tag "search[cause_ids][]", cause.id %> <%= cause.cause_type %><br>
   <% end %>
 
-  <h2>Categories</h2> 
+  <h2>CATEGORIES</h2> 
   <% @categories.each do |category| %>
-    <%= check_box_tag "search[category_ids][]", category.id %> <%= category.category_type %>
+    <%= check_box_tag "search[category_ids][]", category.id %> <%= category.category_type %><br>
   <% end %>
-
   <%= submit_tag :submit %>
-
 <% end %>
