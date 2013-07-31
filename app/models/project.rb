@@ -23,5 +23,4 @@ class Project < ActiveRecord::Base
   def interest_for volunteer
     self.interests.where(:volunteer_id => volunteer.id).first
   end
-
 end
