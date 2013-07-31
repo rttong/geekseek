@@ -1,5 +1,5 @@
-class InterestsController < ApplicationController  
-
+class InterestsController < ApplicationController
+  layout "dashboard"
   def index
     @projects = current_user.volunteer.projects_by_state(params[:state])
   end
@@ -11,7 +11,7 @@ class InterestsController < ApplicationController
   def create
     @interest = Interest.new
     @project = Project.find params[:interest][:project_id]
-    
+
     @interest.volunteer = current_user.volunteer
     @interest.project = @project
     @interest.message = params[:interest][:message]
@@ -28,6 +28,7 @@ class InterestsController < ApplicationController
   def update
     @interest = Interest.find params[:id]
     @interest.update_attributes(:status => params[:status])
+    # render partial: "accept_volunteer"
   end
 
 end
