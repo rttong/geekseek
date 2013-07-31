@@ -13,6 +13,6 @@ class Volunteer < ActiveRecord::Base
   end
 
   def for_project project
-    self.projects << pro
+    self.projects << project
   end
 end

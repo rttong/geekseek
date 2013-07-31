@@ -52,12 +52,6 @@ GEM
     columnize (0.3.6)
     database_cleaner (1.0.1)
     debug_inspector (0.0.2)
-    debugger (1.6.1)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     devise (3.0.0)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -214,7 +208,6 @@ DEPENDENCIES
   carrierwave
   client_side_validations
   database_cleaner
-  debugger
   devise
   factory_girl_rails
   faker
