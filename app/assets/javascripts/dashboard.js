@@ -18,11 +18,11 @@ $(document).ready(function(){
   });
 
   $('.submenu a').on('ajax:success', function(event,data,xhr){
-    $('.content').replaceWith($(data).find(".content"));
+    $('#content_right').replaceWith($(data).find("#content_right"));
   });
 
   $('.complete_profile').on('ajax:success', function(event,data,xhr){
-    $('.content').replaceWith($(data).find(".content"));
+    $('#content_right').replaceWith($(data).find("#content_right"));
   });
 
    

@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   end
 
   def volunteer_for? project
+    return false unless self.volunteer
     self.volunteer.projects.include? project
   end
 
