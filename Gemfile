@@ -27,7 +27,7 @@ end
 
 group :test, :development do
  gem 'rb-fsevent', '~> 0.9'
- gem "rspec"
+ gem 'rspec'
  gem 'rspec-rails'
  gem 'shoulda'
  gem 'shoulda-matchers'
@@ -54,4 +54,4 @@ end
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
+# gem 'debugger'
