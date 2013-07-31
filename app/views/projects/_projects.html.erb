@@ -2,7 +2,7 @@
 <div class="projects">
   <% @projects.each do |project| %>
     <%= link_to "#{project.title}", project_path(project) %> <br>
-    Organization: <%= project.target_date %> <br>
+    Organization: <%= project.organization.org_name %> <br>
     Summary: <%= project.summary %> <br>
     Target End Date: <%= project.target_date %> <br> <br>
   <% end %>

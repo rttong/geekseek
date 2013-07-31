@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  before_filter :find_project, only: [:edit, :update, :destroy]
+  before_filter :find_project, only: [ :edit, :update, :destroy]
   # commented the :show
   before_filter :find_organization, only: [:new, :create, :index]
 
@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
   end
 
   def browse
-    @projects = Project.search(params[:search]) 
+    @projects = Project.search(params[:search])
     @causes = Cause.all
     @categories = Category.all
   end
