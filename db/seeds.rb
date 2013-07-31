@@ -21,19 +21,19 @@ Project.create(title: "Update our Website", summary: "After going through our wh
 project_blue = Organization.create(org_name: "Project Blue", user_id: 1, mission: "The oceans make up 70% of our Earth, providing us with sustenance, beauty and much more.  It our mission at Project Blue to do everything we can to keep it clean for future generations", description: "We partner with schools in beachside communities to lead educational programs for children and adults to teach them about the importance of and methods to keep our oceans clean.", year_founded: 1987, size: 22, url: "https://www.projectblue.com", location: "Ocean City, MD")
 
 1.times do
-  project_blue.cause_ids = project_blue.cause_ids.push(3)
+  project_blue.cause_ids = project_blue.cause_ids.push(6)
 end
 
 hunger = Organization.create(org_name: "Stomp Out Hunger", user_id: 2, mission: "No one deserve to go to be hungry.", description: "We teach self reliance through agriculutural education in rural communities.  Through empowering this communities to take control of their food development, we can stomp out hunger for generations to come", year_founded: 1990, size: 100, url: "https://www.stompouthunger.com", location: "Des Moines")
 
 1.times do
-  hunger.cause_ids = hunger.cause_ids.push(2)
+  hunger.cause_ids = hunger.cause_ids.push(8)
 end
 
 clean_air= Organization.create(org_name: "Clean Air", user_id: 3, mission: "Lobbying for clean air legislature.", description: "We work to promote clean air initiatives by lobbying against large pollution companies and raising funds for programs that further our cause.", year_founded: 2010, size: 5, url: "https://www.cleanair.com", location: "Washington D.C.")
 
 1.times do
-  clean_air.cause_ids = clean_air.cause_ids.push(9)
+  clean_air.cause_ids = clean_air.cause_ids.push(6)
 end
 
 chantal = Volunteer.create(first_name: "Chantal", last_name: "Emmanuel", job_history: "New York Cares 2009 - 2012", phone: "(123) 456- 7890", availability: "4 hours a week" , location: "San Francisco", portfolio_links: "https://www.chantal.com", user_id: 1, linkedin_url: "http://www.linkedin.com/in/chantalemmanuel")
