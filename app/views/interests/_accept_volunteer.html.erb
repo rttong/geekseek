@@ -1,0 +1,5 @@
+<div id="accept_volunteer">
+You've accepted <%= @interest.volunteer.full_name %> as your volunteer, please <%=mail_to "#{@interest.volunteer.user.email}", name = "email" %> them soon to get started.
+</div>
+
+

@@ -7,8 +7,11 @@
       <% project.volunteers.each do |volunteer|%>
         <%= link_to "#{volunteer.full_name}", volunteer_path(volunteer) %>
         <%= mail_to "#{volunteer.user.email}", name = "Email" %>
-        <%= link_to "Accept", interest_path(project.interest_for(volunteer), :status => 'accepted'), :method => :put %>
+        <%= link_to "Accept", interest_path(project.interest_for(volunteer), :status => 'accepted'), :method => :put, remote: true %>
          <%= link_to "Deny",  interest_path(project.interest_for(volunteer), :status => 'deny'), :method => :put %> <br>
+      <% end %>
+      <% if user_signed_in? && current_user.organization? && project.active? %>
+            <%= link_to "Completed", '#' %>
       <% end %>
   <% end %>
 </div>
