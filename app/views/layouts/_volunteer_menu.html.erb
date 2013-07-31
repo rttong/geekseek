@@ -10,8 +10,8 @@
   <li class='three' class='projects'><%= link_to "Projects", '#', id: 'projects_button' %>
     <ul class='submenu'>
       <li><%= link_to "Interested In", interests_path, remote: true %></li>
-      <li><%= link_to "Working on", '/dashboards/working_on', remote: true  %></li>
-      <li><%= link_to "Completed", '/dashboards/v_completed_projects', remote: true %></li>
+      <li><%= link_to "Working on", interests_path(state: "accepted"), remote: true %></li>
+      <li><%= link_to "Completed", interests_path(state: "completed"), remote: true %></li>
     </ul>
   </li>
   <li><%= link_to "Feedback" %></li>

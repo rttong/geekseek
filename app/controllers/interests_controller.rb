@@ -1,7 +1,7 @@
 class InterestsController < ApplicationController  
 
   def index
-    @projects = current_user.volunteer.pending_projects
+    @projects = current_user.volunteer.projects_by_state(params[:state])
   end
 
   def new
