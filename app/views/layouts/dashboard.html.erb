@@ -17,20 +17,23 @@
   </div> <!-- end header_container -->
 </div> <!-- end header_wrapper -->
 
+<div id="sub-header_wrapper"> <!-- start sub-header_wrapper -->
+  <div id="sub-header_container"> <!-- start sub-header_container -->
+    <h1>// DASHBOARD</h1>
+  </div> <!-- end sub-header_container -->
+</div> <!-- end sub-header_wrapper -->
 
-<div id="content_wrapper">
-  <div id="content_container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+<div id="content_wrapper"> <!-- start content_wrapper -->
+  <div id="content_container"> <!-- start content_container -->
     <div id="content_left"> <!-- start content_left -->
       <div id="<%= current_user.profile_type %>_menu">
         <%= render "layouts/#{current_user.profile_type}_menu" %>
       </div>
     </div> <!-- end content_left -->
 
-
     <div id="content_right"> <!-- start content_right -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div> <!-- end content_right -->
 
@@ -40,9 +43,7 @@
 
 <div id="footer_wrapper"> <!-- start footer_wrapper -->
   <div id="footer_container"> <!-- start footer_container -->
-
     <%= render 'layouts/footer' %>
-
   </div> <!-- end footer_container -->
 </div> <!-- end footer_wrapper -->
 
