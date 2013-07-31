@@ -3,4 +3,8 @@
 
   <%= link_to "#{@project.title}", @project %>
 
+<%= @project.volunteers.each do |volunteer|%>
+<%= volunteer.full_name %>
+<% end %>
+
 </div>
