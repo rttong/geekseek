@@ -1,14 +1,13 @@
 .dash_menu {
-  width: 30%;
-  height: 80px;
-  background-color: red;
+  width: 300px;
+  position: fixed;
+  background-color: #eee;
   float: left;
 }
 
 .dash_content {
-  width: 50%;
-  height: 850px;
-  background-color: purple;
+  width: 660px;
+  background-color: #a3b8bf;
   float: right;
 }
 

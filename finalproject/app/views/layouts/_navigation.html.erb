@@ -1,31 +1,21 @@
-<div id="logo">
-  <%= link_to "GeekSeek.me", root_path, :class => "brand" %>
-</div>
+<div id="logo"><%= link_to "GeekSeek.me", root_path, :class => "brand" %></div>
 
-<div id="menu">
-  <%= link_to 'Browse Projects', browse_projects_path  %>
+<div id="menu"> <!-- start menu -->
+  <ul>
+    <li><%= link_to 'PROJECTS', browse_projects_path %></li>
   <% if user_signed_in? %>
-    <ul>
-      <% if current_user.organization? %>
-        <li><%= link_to 'View Dashboard', organization_path  %></li>
-      <% end %>
-
-      <% if current_user.volunteer? %>
-        <li><%= link_to 'View Dashboard', volunteer_path %></li>
-      <% end %>
-
-      <li><%= link_to 'Logout', destroy_user_session_path, :method => 'delete' %></li>
-   </ul>
-
+    <% if current_user.organization? %>
+      <li><%= link_to 'DASHBOARD', organization_path  %></li>
+    <% end %>
+    <% if current_user.volunteer? %>
+      <li><%= link_to 'DASHBOARD', volunteer_path %></li>
+    <% end %>
+    <li><%= link_to 'LOGOUT', destroy_user_session_path, :method => 'delete' %></li>
   <% else %>
-
-    <ul>
-      <li>
-
-        <%= link_to 'Sign In', "#sign_in_form", :id => 'sign_in_button', class: "fancybox" %>
-        <%= render "devise/sessions/sign_in" %>
-      </li>
-    </ul>
+    <li>
+      <%= link_to 'SIGN IN', "#sign_in_form", :id => 'sign_in_button', class: "fancybox" %>
+      <%= render "devise/sessions/sign_in" %>
+    </li>
   <% end %>
-
-</div>
+  </ul>
+</div> <!-- end menu -->
