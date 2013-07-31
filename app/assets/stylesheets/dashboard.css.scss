@@ -1,27 +1,26 @@
 #sub-header_wrapper {
-  margin: 150px auto 0 auto;
+  margin: 100px auto 0 auto;
   width: 100%;
   overflow: hidden;
-  height: 220px;
-  background-image: url('/assets/h1_bg_dashboard.jpg');
+  height: 200px;
+  background-image: url('/assets/sub-header_bg.jpg');
   background-position: top center fixed;
   background-repeat: no-repeat;
 }
 
 #sub-header_container {
   margin: 0 auto;
-  padding-top: 140px;
   width: 960px;
-  height: 220px;
+  height: 200px;
+  line-height: 100px;
+  text-align: center;
 
-  h1 {
-    padding: 5px 5px 5px 15px;
-    width: 940px;
-    height: 50px;
-    line-height: 50px;
-    background-image: url('/assets/pixel.png');
+  #quote {
+    padding: 10px;
+    font: italic 14px Georgia;
+    background-image: url('/assets/pixel_white.png');
     background-repeat: repeat;
-    color: #7debfd;
+    border-radius: 3px;
   }
 }
 

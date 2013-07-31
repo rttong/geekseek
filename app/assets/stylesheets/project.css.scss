@@ -1,28 +1,28 @@
 #sub-header_wrapper {
-  margin: 150px auto 0 auto;
+  margin: 0 auto;
   width: 100%;
   overflow: hidden;
-  height: 220px;
-  background-image: url('/assets/h1_bg_projects.jpg');
+  height: 200px;
+  background-image: url('/assets/sub-header_bg.jpg');
   background-position: top center fixed;
   background-repeat: no-repeat;
 }
 
 #sub-header_container {
   margin: 0 auto;
-  padding-top: 140px;
+  padding-top: 100px;
   width: 960px;
-  height: 220px;
+  height: 200px;
 
-  h1 {
-    padding: 5px 5px 5px 15px;
-    width: 940px;
-    height: 50px;
-    line-height: 50px;
+/*  #quote {
+    margin-top: 150px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #fff;
     background-image: url('/assets/pixel.png');
     background-repeat: repeat;
-    color: #7debfd;
-  }
+  }*/
+
 }
 
 #content_wrapper {
