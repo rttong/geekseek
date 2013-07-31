@@ -1,5 +1,4 @@
 <h1>Active Projects</h1>
-
 <div class="projects">
   <% @projects.each do |project| %>
     <%= link_to "#{project.title}", project_path(project) %> <br>
@@ -11,7 +10,7 @@
          <%= link_to "Deny",  interest_path(project.interest_for(volunteer), :status => 'deny'), :method => :put %> <br>
       <% end %>
       <% if user_signed_in? && current_user.organization? && project.active? %>
-            <%= link_to "Completed", '#' %>
+        <%= link_to "Completed", project_path(project, project: {state: "completed"}), :method => :put, remote:true %>
       <% end %>
   <% end %>
 </div>
