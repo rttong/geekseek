@@ -1,30 +1,3 @@
-#sub-header_wrapper {
-  margin: 150px auto 0 auto;
-  width: 100%;
-  overflow: hidden;
-  height: 220px;
-  background-image: url('/assets/h1_bg_projects.jpg');
-  background-position: top center fixed;
-  background-repeat: no-repeat;
-}
-
-#sub-header_container {
-  margin: 0 auto;
-  padding-top: 140px;
-  width: 960px;
-  height: 220px;
-
-  h1 {
-    padding: 5px 5px 5px 15px;
-    width: 940px;
-    height: 50px;
-    line-height: 50px;
-    background-image: url('/assets/pixel.png');
-    background-repeat: repeat;
-    color: #7debfd;
-  }
-}
-
 #content_wrapper {
   margin: 0 auto;
   width: 100%;
@@ -67,10 +40,6 @@
     }  
   }
 }
-
-
-
-
 
 .dash_menu li > .submenu{
   display: none;

@@ -19,25 +19,39 @@
 
 <div id="sub-header_wrapper"> <!-- start sub-header_wrapper -->
   <div id="sub-header_container"> <!-- start sub-header_container -->
-    <h1>// PROJECTS</h1>
+    <span id="quote">Generosity is giving more than you can, and pride is taking less than you need. - Kahlil Gibran</span>
   </div> <!-- end sub-header_container -->
 </div> <!-- end sub-header_wrapper -->
 
-<div id="content_wrapper">
+<div id="content_wrapper"> <!-- start content_wrapper -->
+  <div id="content_container"> <!-- start content_container -->
+    <div id="content_left"> <!-- start content_left -->
+      <div id="project_menu">
+        <%= render "layouts/project_menu" %>
+      </div>
+    </div> <!-- end content_left -->
+    
+    <div id="content_right"> <!-- start content_right -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div> <!-- end content_right -->
+    
+  </div> <!-- end content_container -->
+</div> <!-- end content_wrapper -->
 
-  <div id="content_container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-  </div>
-</div>
-
-<div id="footer_wrapper">
-  <div id="footer_container">
+<div id="footer_wrapper"> <!-- start footer_wrapper -->
+  <div id="footer_container"> <!-- start footer_container -->
     <%= render 'layouts/footer' %>
-  </div>
-</div>
+  </div> <!-- end footer_container -->
+</div> <!-- end footer_wrapper -->
+
+<div id="copyright_wrapper"> <!-- start copyright_wrapper -->
+  <div id="copyright_container"> <!-- start copyright_container -->
+    Copyright &copy; MMXIII <%= link_to 'GeekSeek.me', root_path %>.<br>
+    Some rights reserved.
+  </div> <!-- end copyright_container -->
+</div> <!-- end copyright_wrapper -->
 
 </body>
 </html>
