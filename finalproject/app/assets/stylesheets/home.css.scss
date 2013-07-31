@@ -100,7 +100,9 @@ body {
 
     #content_left {
       width: 300px;
+      min-height: 500px;
       float: left;
+      background-color: #333;
     } 
     
     #content_right {
