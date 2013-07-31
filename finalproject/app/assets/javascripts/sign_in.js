@@ -10,8 +10,6 @@ $(document).ready(function(){
     $('#sign_in_form').fadeOut();
   });
 
-
-
   $('#signup_v').click( function(e) {
     e.preventDefault();
     $('#signup_form_v').fadeIn();
