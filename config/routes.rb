@@ -11,8 +11,6 @@ Finalproject::Application.routes.draw do
   end
   resources :interests
 
-  match "/dashboards/:name" => "dashboards#show"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
