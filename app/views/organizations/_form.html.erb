@@ -2,7 +2,7 @@
   <%= f.input :org_name %>
   <%= f.input :location %>
   <%= f.association :causes, :label_method => lambda { |cause| "#{cause.cause_type}" }, as: :check_boxes %>
-  <%= f.text_area :mission %>
+  <%= f.input :mission, label: 'Mission', as: :text %>
   <%= f.input :description %>
   <%= f.input :year_founded, :label => "Year Founded"  %>
   <%= f.input :size, :label => "Number of Employees" %>

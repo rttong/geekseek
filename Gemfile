@@ -27,7 +27,7 @@ end
 
 group :test, :development do
  gem 'rb-fsevent', '~> 0.9'
- gem "rspec"
+ gem 'rspec'
  gem 'rspec-rails'
  gem 'rspec'
  gem 'shoulda'

@@ -1,6 +1,11 @@
 <h1>Project</h1>
 <div class="projects">
   <% @projects.each do |project| %>
-    <%= link_to "#{project.title}", project_path(project) %>
+    <%= link_to "#{project.title}", project_path(project) %> <br>
+    Organization: <%= project.target_date %> <br>
+    Summary: <%= project.summary %> <br>
+    Target End Date: <%= project.target_date %> <br> <br>
   <% end %>
 </div>
+
+
