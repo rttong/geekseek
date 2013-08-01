@@ -33,3 +33,12 @@ input:hover {
 	transition: 0.5s;
   -webkit-transition: 0.5s;
 }
+
+.btn{
+	display: inline-block;
+	padding:20px;
+	background-color: #444;
+	&:hover{
+		text-decoration: none;
+	}
+}
