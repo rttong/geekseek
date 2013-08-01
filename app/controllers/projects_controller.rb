@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_filter :find_organization, except: [:browse]
+  before_filter :authenticate_user!, except: [:browse, :show]
+  before_filter :find_organization, except: [:browse, :show]
   before_filter :find_project, only: [:edit, :update, :destroy]
 
   layout :set_layout
