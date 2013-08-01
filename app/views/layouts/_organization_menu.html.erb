@@ -1,5 +1,5 @@
 <ul class='dash_menu'>
-  <li class='one' class='picture'>PICTURE</li>
+  <li class='one' class='picture'><%= image_tag @organization.avatar.to_s %></li>
   <li class='two' class='profile'><%= link_to "// PROFILE", "#", id: 'profile_button', remote: true %>
     <ul class='submenu'>
       <li><%= link_to 'Edit Profile', edit_organization_path, remote: true %></li>

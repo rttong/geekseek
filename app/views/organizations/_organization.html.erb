@@ -1,19 +1,18 @@
 <div class="dash_content">
   <h1>ORGANIZATION PROFILE</h1>
-  
-  <ul>
-		<li><%= image_tag @organization.avatar.to_s %></li>
-    <li>Name: <%= @organization.org_name %></li>
-    <li>Year Founded: <%= @organization.year_founded %></li>
-    <li>Causes: </li>
-      <ul>
+
+
+
+    Name: <%= @organization.org_name %>
+    <strong>Year Founded: </strong> <%= @organization.year_founded %><br><br>
+    <strong>Causes: </strong> <br><br>
+
       <% @organization.causes.each do |cause| %>
-      <li><%= cause.cause_type %></li>
+      <%= cause.cause_type %>
       <% end %>
-      </ul>
-    <li>Organization Size: <%= @organization.size %></li>
-    <li>Website: <%= @organization.url %></li>
-    <li>Mission: <%= @organization.mission %></li>
-    <li>Program Description: <%= @organization.description %></li>
-  </ul>
+
+    <strong>Organization Size: </strong> <%= @organization.size %><br><br>
+    <strong>Website: </strong> <%= @organization.url %><br><br>
+    <strong>Mission: </strong> <%= @organization.mission %><br><br>
+    <strong>Program Description: </strong> <%= @organization.description %><br><br>
 </div>
