@@ -2,12 +2,12 @@
   <li class='one' class='picture'><%= image_tag avatar_url(current_user) %></li>
   <li class='two' class='profile'><%= link_to "// PROFILE", "#", id: 'profile_button' %>
     <ul class='submenu'>
-      <li><%= link_to 'Edit Account', edit_volunteer_path, remote: true %></li>
+      <li><%= link_to 'Edit Profile', edit_volunteer_path, remote: true %></li>
     </ul>
   </li>
   <li class='three' class='projects'><%= link_to "// PROJECTS", '#', id: 'projects_button' %>
     <ul class='submenu'>
-      <li><%= link_to "Interested In", interests_path, remote: true %></li>
+      <li><%= link_to "Interested in", interests_path, remote: true %></li>
       <li><%= link_to "Working on", interests_path(status: "accepted"), :method => "get", remote:true %></li>
       <li><%= link_to "Completed", interests_path(state: "completed"), remote: true %></li>
     </ul>
