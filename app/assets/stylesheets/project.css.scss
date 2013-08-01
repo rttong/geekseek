@@ -68,22 +68,22 @@
   width:960px;
   margin:0 auto;
   margin-top:150px;
+  h2{
+  color: #30beda;
+  }
 }
 
 #project_stats{
-  border: 1px solid;
   padding:24px;
   margin-bottom: 32px;
   position: relative;
+  background-color: #DDD;
 }
 
 #org_project{
   overflow: hidden;
   margin-bottom: 24px;
-
-
   div {
-    border: 1px solid;
     width:44%;
     padding:24px;
     height:300px;
@@ -91,9 +91,11 @@
 }
 #org_stats{
   float:left;
+  background-color: #DDD;
 }
 #org_info{
   float:right;
+  background-color: #DDD;
 }
 
 #interested_in{
@@ -105,10 +107,16 @@
 #related_projects{
   clear: both;
   padding:24px;
+  background-color: #DDD;
+  margin-bottom: 28px;
   img{
     margin-right: 50px;
     &:last-child {
       margin-right: 0;
     }
   }
+}
+
+hr {
+  border-width: 2px;
 }
