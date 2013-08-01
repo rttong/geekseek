@@ -5,7 +5,7 @@
     <li>Skills:</li>
     <ul>
       <% @volunteer.skills.each do |skill| %>
-      <li> <%= skill.skill_type %>  </li>
+        <li><%= skill.skill_type %></li>
       <% end %>
     </ul>
     <li>Experience:<%= @volunteer.job_history %></li>
