@@ -1,28 +1,27 @@
 .dash_menu {
-  margin: 0;
+  margin: 5px;
   padding: 0;
-  width: 300px;
-  height: 700px;
+  width: 290px;
   list-style: none;
 
   li.one {
-    margin-bottom: 10px;
+    width: 290px;
     height: 100px;
-    width: 300px;
     list-style: none;
-    background-color: #7debfd;
+    background-color: #ccc;
+    border-bottom: 1px solid #eee;
   }
 
   li.two,
   li.three,
   li.four {
     padding: 10px 0 10px 10px;
-    background-color: #70ffc4;
+    background-color: #4b4d57;
     border-bottom: 1px solid #eee;
 
-    a {
+   /* a {
       color: #333;
-    }
+    }*/
 
     .submenu {
       margin: 10px 0 0 0;
@@ -31,18 +30,20 @@
 
       li {
         padding: 5px 0 0 10px;
+        background-color: #eee;
+        border-bottom: 1px solid #ccc;
       }
 
     }
   }
 
-  li.two:hover,
+/*  li.two:hover,
   li.three:hover,
   li.four:hover {
-    background-color: #7debfd;
+    background-color: #3e4147;
     transition:0.9s;
     -webkit-transition:0.9s;
-  }
+  }*/
 }
 
 #volunteer_menu,
