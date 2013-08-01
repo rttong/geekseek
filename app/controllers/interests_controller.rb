@@ -3,7 +3,11 @@ class InterestsController < ApplicationController
   layout "dashboard"
 
   def index
-    @projects = current_user.volunteer.projects_by_state(params[:state])
+    if current_user.volunteer
+      @projects = current_user.volunteer.projects_by_state(params[:state])
+    else
+      @projects = []
+    end
   end
 
   def new
@@ -30,7 +34,6 @@ class InterestsController < ApplicationController
   def update
     @interest = Interest.find params[:id]
     @interest.update_attributes(:status => params[:status])
-    # render partial: "accept_volunteer"
   end
 
 end
