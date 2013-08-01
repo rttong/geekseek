@@ -48,7 +48,11 @@
   </div>
 
   <div id="related_projects">
-    <h1>HILFE MIR!</h1>
+    <h2>Related Projects</h2>
+    <hr>
+    <% @organizations.each do |organization| %>
+      <%= image_tag organization.avatar.url(:thumb) %>
+    <% end %>
   </div>
 
 </div>

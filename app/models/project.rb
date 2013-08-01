@@ -10,6 +10,7 @@ class Project < ActiveRecord::Base
 
   scope :active, -> { where(state: "active") }
   scope :completed, -> { where(state: "completed") }
+  scope :latest, ->(num=5) { order("id DESC").limit(num) }
 
   def self.search(params={})
     params ||= {}
