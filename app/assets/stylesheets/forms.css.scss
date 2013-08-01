@@ -56,6 +56,12 @@ input:hover {
 		&.check_boxes {
 			margin-left: 155px;
 		}
+
+		.file {
+			padding: 8px;
+			height: 36px;
+			line-height: 0px;
+		}
 	}
 
 	label {
@@ -64,6 +70,7 @@ input:hover {
 		width: 25%;
 		display: inline-block;
 		float: left;
+		line-height: 30px;
 
 		&.check_boxes {
 			padding-left: 0px;
@@ -78,11 +85,17 @@ input:hover {
 	input, textarea {
 		float: left;
 		width: 75%;
+		height: auto;
 		border: 1px solid #ccc;
+	}
+
+	textarea {
+		height: 120px;
 	}
 
 	input[type=checkbox] {
 		width: 20px;
+		margin-top: 16px;
 	}
 
 	.checkbox {
@@ -97,6 +110,7 @@ input:hover {
 	}
 
 	.button {
+		font-size: 18px;
 		margin-left: 155px;
 		line-height: 30px;
 		height: auto;
