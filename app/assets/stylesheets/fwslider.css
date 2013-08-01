@@ -95,7 +95,7 @@
 #fwslider .timer {
     height:4px;
     width:40px;
-    background-color: #fe8af6;
+    background-color: #30beda;
     float:left;
     margin-right: 10px;
 }
@@ -144,7 +144,7 @@
 #fwslider .readmore { /* Slider Read More button Style */
     background:#222;
     clear:both;
-    color:#fe8af6;
+    color:#30beda;
     float:left;
     font-size:20px;
     padding:10px;

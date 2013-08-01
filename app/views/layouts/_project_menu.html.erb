@@ -7,7 +7,9 @@
 
   <h2>CATEGORIES</h2>
   <% @categories.each do |category| %>
-    <%= check_box_tag "search[category_ids][]", category.id %> <%= category.category_type %>
+   <span> <%= check_box_tag "search[category_ids][]", category.id %> <%= category.category_type %> </span><br>
   <% end %>
-  <%= submit_tag :submit %>
+
+  <%= submit_tag :submit, class: "search_button"%>
+  <br>
 <% end %>
