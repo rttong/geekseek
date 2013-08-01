@@ -12,3 +12,7 @@
  *= require jquery.fancybox
  *= require_tree .
  */
+
+.datepicker-custom {
+  @import "jquery.ui.datepicker"
+}

@@ -1,5 +1,5 @@
 <%= simple_form_for @project, :url => projects_path, remote: true, html: {class: "form-horizontal"} do |f| %>
-  <%= f.input :target_date %>
+  <%= f.input :target_date, as: :string, input_html: {class: "datepicker"} %>
   <%= f.input :title %>
   <%= f.input :summary, as: :text, :label => "Project Details" %>
   <%= f.input :importance, as: :text, :label => "How will this help your organization?" %>
@@ -7,3 +7,10 @@
 
   <%= f.button :submit %>
 <% end %>
+
+<script type="text/javascript">
+  $(function(){
+     $(".datepicker").datepicker();
+     $("#ui-datepicker-div").wrap('<div class="datepicker-custom" />');
+  });
+</script>
