@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
 
-  before_filter :find_project, only: [ :edit, :update, :destroy]
-  # commented the :show
-  before_filter :find_organization, only: [:new, :create, :index]
-
+  before_filter :find_organization
+  before_filter :find_project, only: [:edit, :update, :destroy]
+  # commented the :show:update, 
+  
   layout :set_layout
 
   def index
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
   def find_project
     @project = @organization.projects.find(params[:id])
   end
-
+      
   def find_organization
     @organization = current_user.organization
   end

@@ -1,8 +1,9 @@
 class InterestsController < ApplicationController
+ 
   layout "dashboard"
+
   def index
-    @projects = current_user.volunteer.projects_by_state(params[:status])
-    #:state
+    @projects = current_user.volunteer.projects_by_state(params[:state])
   end
 
   def new
