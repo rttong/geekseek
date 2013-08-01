@@ -27,6 +27,7 @@ body {
   position: fixed;
   background-image: url('/assets/pixel.png');
   background-repeat: repeat;
+  z-index: 10;
 
   #header_container {
     margin: 0 auto;

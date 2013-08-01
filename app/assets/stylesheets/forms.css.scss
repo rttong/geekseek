@@ -51,4 +51,13 @@ label {
             top: -1px;
             *overflow: hidden;
         }
+
+.btn{
+	display: inline-block;
+	padding:20px;
+	background-color: #444;
+	&:hover{
+		text-decoration: none;
+	}
+
 }
