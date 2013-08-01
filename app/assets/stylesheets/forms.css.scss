@@ -5,6 +5,7 @@ body{
 #check_box_signin{
 	width: 200px;
 }
+
 #sign_in_form {
 	display: none;
 }
@@ -37,14 +38,14 @@ input:hover {
 	-webkit-transition: 0.5s;
 }
 
-.btn{
+.btn {
 	display: inline-block;
 	padding:20px;
 	background-color: #444;
-	&:hover{
+
+	&:hover {
 		text-decoration: none;
 	}
-
 }
 
 #sign_in_form{
