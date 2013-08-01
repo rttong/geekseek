@@ -49,3 +49,38 @@
   display:none;
 }
 
+#project_info{
+  width:960px;
+  margin:0 auto;
+  margin-top:150px;
+}
+
+#project_stats{
+  border: 1px solid;
+  padding:24px;
+  margin-bottom: 32px;
+}
+
+#org_project{
+  div{
+  border: 1px solid;
+  width:44%;
+  padding:24px;
+  height:300px;
+  }
+}
+#org_stats{
+  float:left;
+}
+#org_info{
+  float:right;
+}
+
+#interested_in{
+  float:right;
+}
+
+#related_projects{
+  // height: 200px;
+  // border: 1px solid;
+}
