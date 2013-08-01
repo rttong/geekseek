@@ -63,11 +63,15 @@
 }
 
 #org_project{
-  div{
-  border: 1px solid;
-  width:44%;
-  padding:24px;
-  height:300px;
+  overflow: hidden;
+  margin-bottom: 24px;
+
+
+  div {
+    border: 1px solid;
+    width:44%;
+    padding:24px;
+    height:300px;
   }
 }
 #org_stats{
@@ -84,6 +88,6 @@
 }
 
 #related_projects{
-  // height: 200px;
-  // border: 1px solid;
+  clear: both;
+  padding:24px;
 }
