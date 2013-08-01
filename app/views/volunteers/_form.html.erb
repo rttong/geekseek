@@ -1,5 +1,6 @@
 <% project_id ||= nil %>
-<% options[:url]  = volunteer_path %>
+<% options[:url] = volunteer_path %>
+<% options[:html] = {class: "form-horizontal"} %>
 <%= simple_form_for volunteer, options do |f| %>
   <%= f.input :first_name %>
   <%= f.input :last_name %>
@@ -9,6 +10,9 @@
   <%= f.input :linkedin_url %>
   <%= f.input :portfolio_links %>
   <%= hidden_field_tag :project_id, project_id %>
+
+  <br/>
+
   <%= f.association :skills, :label_method => lambda { |skill| "#{skill.skill_type}" }, as: :check_boxes %>
 
   <%= f.button :submit, id: 'update_profile_button' %>

@@ -1,4 +1,4 @@
-<%= simple_form_for @organization, url: organization_path do |f| %>
+<%= simple_form_for @organization, url: organization_path, html: {class: "form-horizontal"} do |f| %>
   <%= f.input :org_name %>
   <%= f.input :location %>
   <%= f.association :causes, :label_method => lambda { |cause| "#{cause.cause_type}" }, as: :check_boxes %>
@@ -7,6 +7,6 @@
   <%= f.input :year_founded, :label => "Year Founded"  %>
   <%= f.input :size, :label => "Number of Employees" %>
   <%= f.input :url, :label => "Website" %>
-  <%= f.file_field :avatar %>
+  <%= f.input :avatar, as: :file %>
   <%= f.button :submit %>
 <% end %>

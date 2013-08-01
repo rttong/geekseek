@@ -1,15 +1,11 @@
-  <% if @projects.all.empty?%>
-    <h3>Sorry, there are no current projects to display, please check back soon.</h3>
-  <% else %>
-  <h1>ALL PROJECTS</h1>
-      <% @projects.each do |project| %>
-        <%= link_to "#{project.title}", project_path(project) %> <br>
-        Organization: <%= project.organization.org_name %> <br>
-        Summary: <%= project.summary %> <br>
-        Target End Date: <%= project.target_date %> <br> <br>
-      <% end %>
-
+<% if @projects.empty?%>
+  <h3>Sorry, there are no current projects to display, please check back soon.</h3>
+<% else %>
+<h1>ALL PROJECTS</h1>
+  <% @projects.each do |project| %>
+    <%= link_to "#{project.title}", project_path(project) %> <br>
+    Organization: <%= project.organization.org_name %> <br>
+    Summary: <%= project.summary %> <br>
+    Target End Date: <%= project.target_date %> <br> <br>
   <% end %>
-</div>
-
-
+<% end %>

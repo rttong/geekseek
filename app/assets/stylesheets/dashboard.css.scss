@@ -42,8 +42,10 @@
 
 .dash_content {
   width: 660px;
-  background-color: #a3b8bf;
-  float: right;
+  background-color: #ccc;
+  // float: right;
+  padding: 18px;
+  border: 5px solid #eee;
 }
 
 .dash_menu li > .submenu {
