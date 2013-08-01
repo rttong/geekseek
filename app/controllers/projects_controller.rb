@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
 
   before_filter :find_organization
   before_filter :find_project, only: [:edit, :update, :destroy]
-  
+
   layout :set_layout
 
   def index
@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
   def find_project
     @project = @organization.projects.find(params[:id])
   end
-      
+
   def find_organization
     if current_user == nil
       @organzation = Organization.all

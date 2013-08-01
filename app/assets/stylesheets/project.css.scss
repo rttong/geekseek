@@ -17,18 +17,24 @@
         width: 300px;
         background-color: #eee;
 
-        #search_form {
-          checkbox {
-            background-color: red;
+       label {
+              display: inline-block;
+              padding-left: 15px;
+              text-indent: -15px;
           }
-
-          input {
-            width: 300px;
-          }
+        input {
+            width: 13px;
+            height: 13px;
+            padding: 0;
+            margin:0;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
+            *overflow: hidden;
         }
       }
-    } 
-    
+    }
+
     #content_right {
       margin-left: 40px;
       width: 620px;
@@ -37,7 +43,7 @@
       .projects{
         width: 620px;
       }
-    }  
+    }
   }
 }
 
@@ -49,3 +55,45 @@
   display:none;
 }
 
+#project_info{
+  width:960px;
+  margin:0 auto;
+  margin-top:150px;
+}
+
+#project_stats{
+  border: 1px solid;
+  padding:24px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+#org_project{
+  overflow: hidden;
+  margin-bottom: 24px;
+
+
+  div {
+    border: 1px solid;
+    width:44%;
+    padding:24px;
+    height:300px;
+  }
+}
+#org_stats{
+  float:left;
+}
+#org_info{
+  float:right;
+}
+
+#interested_in{
+  position: absolute;
+  top:10px;
+  right:24px;
+}
+
+#related_projects{
+  clear: both;
+  padding:24px;
+}

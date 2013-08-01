@@ -1,59 +1,57 @@
 <div id="project_info">
-  Project info
-  <div>
-    <% if current_user && current_user.volunteer_for?(@project) %>
-      You have already applied for this project
-    <% else %>
-      <%= link_to "I'm interested in this project", "#apply", class: "fancybox", id: 'interested' %>
-    <% end %>
-  </div>
-
+  
   <div id="project_stats">
-    <%= @project.title %> <br>
+    <h2><%= @project.title %> </h2>
+    <hr>
     Completion Date: <%= @project.target_date %> <br>
     Project Details: <%= @project.summary %> <br>
     Why is this important to the organization: <%= @project.importance %> <br>
     Category: <br>
     <% if @project.categories %>
-    <% @project.categories.each do |category| %>
-    <%= category.category_type %> <br>
+      <% @project.categories.each do |category| %>
+      <%= category.category_type %> <br>
+      <% end %>
     <% end %>
-    <% end %>
+
+    <span id='interested_in'>
+      <% if current_user && current_user.volunteer_for?(@project) %>
+        You have already applied for this project
+      <% else %>
+        <%= link_to "I'm interested in this project", "#apply", class: "fancybox btn", id: 'interested' %>
+      <% end %>
+    </span>
   </div>
+
+  <div id="org_project">
+    <div id="org_stats">
+      <h2>Organization Stats</h2>
+      <hr>
+      <%= image_tag @project.organization.avatar.to_s %> <br>
+      Organization Name: <%= @project.organization.org_name %> <br>
+      Organization location: <%= @project.organization.location %> <br>
+      Year Founded: <%= @project.organization.year_founded %> <br>
+      Size: <%= @project.organization.size %> employees <br>
+      Cause(s): <br>
+      <% if @project.organization.causes %>
+      <% @project.organization.causes.each do |cause| %>
+      <%= cause.cause_type %> <br>
+      <% end %>
+      <% end %>
+    </div>
+
+    <div id="org_info">
+      <h2>Organization Info</h2>
+      <hr>
+      Mission: <%= @project.organization.mission %> <br>
+      Program Description: <%= @project.organization.description %> <br>
+    </div>
+  </div>
+
+  <div id="related_projects">
+    <h1>HILFE MIR!</h1>
+  </div>
+
 </div>
-
-<p>
-  <div id="org_stats">
-
-    <h2>Organization Stats</h2>
-    <%= image_tag @project.organization.avatar.to_s %> <br>
-    Organization Name: <%= @project.organization.org_name %> <br>
-    Organization location: <%= @project.organization.location %> <br>
-    Year Founded: <%= @project.organization.year_founded %> <br>
-    Size: <%= @project.organization.size %> employees <br>
-    Cause(s): <br>
-    <% if @project.organization.causes %>
-    <% @project.organization.causes.each do |cause| %>
-    <%= cause.cause_type %> <br>
-    <% end %>
-    <% end %>
-  </div>
-</p>
-
-<p>
-  <div id="org_info">
-    <h2>Organization Info</h2>
-
-    Mission: <%= @project.organization.mission %> <br>
-    Program Description: <%= @project.organization.description %> <br>
-
-  </div>
-</p>
-
-<div id="related_projects">
-  related projects
-</div>
-
 
 <div id="apply">
   <% if user_signed_in? %>
@@ -77,11 +75,6 @@
     <%= render '/devise/registrations/sign_up_v' %>
   <% end %>
 </div>
-
-<div id="confirmation" class='fancybox' >
-  <p>Thanks, bitch.</p>
-</div>
-
 
 
 
