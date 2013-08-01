@@ -12,14 +12,22 @@ class OrganizationsController < ApplicationController
 
   def create
     @organization.attributes = params[:organization]
-    @organization.save
+    if @organization.save
+      redirect_to organization_path
+    else
+      render "new"
+    end
   end
 
   def edit
   end
 
   def update
-    @organization.update_attributes(params[:organization])
+    if @organization.update_attributes(params[:organization])
+      redirect_to organization_path
+    else
+      render "edit"
+    end
   end
 
   def find_organization

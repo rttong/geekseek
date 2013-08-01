@@ -2,7 +2,7 @@
   <h1>ORGANIZATION PROFILE</h1>
   
   <ul>
-		<li><%= image_tag @organization.avatar.to_s %></li>
+		<li><%= image_tag @organization.avatar.url(:thumb) %></li>
     <li>Name: <%= @organization.org_name %></li>
     <li>Year Founded: <%= @organization.year_founded %></li>
     <li>Causes: </li>

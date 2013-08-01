@@ -12,4 +12,6 @@ class Organization < ActiveRecord::Base
   
   mount_uploader :avatar, AvatarUploader
 
+  scope :latest, ->(num=5) { order("id DESC").limit(num) }
+
 end
