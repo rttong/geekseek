@@ -44,3 +44,64 @@ input:hover {
 
 }
 
+.form-horizontal {
+	* {
+		box-sizing: border-box;
+	}
+
+	.input {
+		margin-bottom: 5px;
+		overflow: hidden;
+
+		&.check_boxes {
+			margin-left: 155px;
+		}
+	}
+
+	label {
+		text-align: right;
+		padding: 6px 18px;
+		width: 25%;
+		display: inline-block;
+		float: left;
+
+		&.check_boxes {
+			padding-left: 0px;
+			font-size: 18px;
+			font-weight: bold;
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	input, textarea {
+		float: left;
+		width: 75%;
+		border: 1px solid #ccc;
+	}
+
+	input[type=checkbox] {
+		width: 20px;
+	}
+
+	.checkbox {
+		width: 50%;
+		float: left;
+		display: inline-block;
+
+		label {
+			width: 200px;
+			text-align: left;
+		}
+	}
+
+	.button {
+		margin-left: 155px;
+		line-height: 30px;
+		height: auto;
+	}
+
+
+}
+
