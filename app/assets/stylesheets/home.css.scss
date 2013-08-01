@@ -7,7 +7,7 @@ body {
   color: #333;
 
   a {
-    color: #fe8af6;
+    color: #30beda;
     text-decoration: none;
   }
 
@@ -27,6 +27,7 @@ body {
   position: fixed;
   background-image: url('/assets/pixel.png');
   background-repeat: repeat;
+  z-index: 10;
 
   #header_container {
     margin: 0 auto;
@@ -65,7 +66,7 @@ body {
             padding: 0 10px;
             height: 90px;
             display: inline-block;
-            border-bottom: 10px solid #fe8af6;
+            border-bottom: 10px solid #30beda;
             text-align: center;
             font-size: 20px;
             text-decoration: none;
