@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
-  before_filter :find_organization
+  # before_filter :authenticate_user!, except: [:browse, :show]
+  before_filter :find_organization #, except: [:browse]
   before_filter :find_project, only: [:edit, :update, :destroy]
 
   layout :set_layout
@@ -49,7 +50,11 @@ class ProjectsController < ApplicationController
   end
 
   def find_organization
-    @organization = current_user.organization || current_user.build_organization
+    if current_user == nil
+      @organization = Organization.all
+    else
+      @organization = current_user.organization
+    end
   end
 
   def set_layout

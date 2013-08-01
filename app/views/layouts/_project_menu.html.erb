@@ -1,5 +1,6 @@
-<%= form_tag browse_projects_path, method: "get", remote: true, id: 'search_form' do |f| %>
+<%= form_tag browse_projects_path, method: "get", remote: true, id: 'search_form', html: {class: "form-horizontal"}  do |f| %>
   <h2>CAUSES</h2>
+
 
   <% @causes.each do |cause| %>
 <span><%= check_box_tag("search[cause_ids][]",  cause.id) %><%= label_tag(cause.cause_type) %> </span> <br>
@@ -11,5 +12,6 @@
   <% end %>
 
   <%= submit_tag :submit, class: "search_button"%>
+
   <br>
 <% end %>
