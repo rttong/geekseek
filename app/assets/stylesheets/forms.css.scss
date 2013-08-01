@@ -44,3 +44,82 @@ input:hover {
 
 }
 
+.form-horizontal {
+	* {
+		box-sizing: border-box;
+	}
+
+	.input {
+		margin-bottom: 5px;
+		overflow: hidden;
+
+		&.check_boxes {
+			margin-left: 155px;
+		}
+
+		.file {
+			padding: 8px;
+			height: 36px;
+			line-height: 0px;
+		}
+	}
+
+	label {
+		text-align: right;
+		padding: 6px 18px;
+		width: 25%;
+		display: inline-block;
+		float: left;
+		line-height: 30px;
+
+		&.check_boxes {
+			padding-left: 0px;
+			font-size: 18px;
+			font-weight: bold;
+			display: block;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	input, textarea {
+		float: left;
+		width: 75%;
+		height: auto;
+		border: 1px solid #ccc;
+	}
+
+	textarea {
+		height: 120px;
+	}
+
+	input[type=checkbox] {
+		width: 20px;
+		margin-top: 16px;
+	}
+
+	select {
+		margin-top: 12px;
+	}
+
+	.checkbox {
+		width: 50%;
+		float: left;
+		display: inline-block;
+
+		label {
+			width: 200px;
+			text-align: left;
+		}
+	}
+
+	.button {
+		font-size: 18px;
+		margin-left: 155px;
+		line-height: 30px;
+		height: auto;
+	}
+
+
+}
+

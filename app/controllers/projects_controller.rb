@@ -49,11 +49,7 @@ class ProjectsController < ApplicationController
   end
 
   def find_organization
-    if current_user == nil
-      @organzation = Organization.all
-    else
-      @organization = current_user.organization
-    end
+    @organization = current_user.organization || current_user.build_organization
   end
 
   def set_layout
