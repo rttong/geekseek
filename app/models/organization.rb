@@ -8,8 +8,8 @@ class Organization < ActiveRecord::Base
   has_many :volunteers, through: :projects
   has_many :projects
 
-  accepts_nested_attributes_for :causes
-  
+  # accepts_nested_attributes_for :causes
+
   mount_uploader :avatar, AvatarUploader
 
   scope :latest, ->(num=5) { order("id DESC").limit(num) }

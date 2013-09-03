@@ -15,7 +15,7 @@ class Volunteer < ActiveRecord::Base
   has_many :organizations, through: :projects
 
   belongs_to :user
-  accepts_nested_attributes_for :skills
+  # accepts_nested_attributes_for :skills
 
   def projects_by_state(state)
     return pending_projects if state.blank?
