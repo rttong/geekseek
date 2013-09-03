@@ -8,8 +8,5 @@ class ApplicationController < ActionController::Base
       organization_url
     end
   end
-
-  def index
-  end
   
 end

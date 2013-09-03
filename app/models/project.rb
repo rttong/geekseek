@@ -13,11 +13,9 @@ class Project < ActiveRecord::Base
   scope :latest, ->(num=5) { order("id DESC").limit(num) }
 
   def self.search(params={})
-    params ||= {}
     relation = self.unscoped
     relation = self.joins(organization: :causes).where("causes.id IN (?)", params[:cause_ids]) if params[:cause_ids]
     relation = relation.joins(:categories).where("categories.id IN (?)", params[:category_ids]) if params[:category_ids]
-    # relation.where("title ILIKE('%?%') OR summary ILIKE('%?%')", params[:text],params[:text]) if params[:text]
     relation
   end
 
