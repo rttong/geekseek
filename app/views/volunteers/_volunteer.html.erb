@@ -1,17 +1,16 @@
 <div class="dash_content">
+  <h1><%= @volunteer.full_name %></h1>
   <ul>
-    <li> <%= image_tag avatar_url(current_user) %> </li>
-    <li>Name: <%= @volunteer.full_name %></li>
-    <li>Skills:</li>
+    <li>Skills:</li> 
     <ul>
       <% @volunteer.skills.each do |skill| %>
         <li><%= skill.skill_type %></li>
       <% end %>
     </ul>
-    <li>Experience:<%= @volunteer.job_history %></li>
+    <li>Experience: <%= @volunteer.job_history %></li>
     <li>Phone: <%= @volunteer.phone %></li>
     <li>Availability: <%= @volunteer.availability %></li>
     <li>Portfolio: <%= @volunteer.portfolio_links %></li>
-    <li>linkedIn: <%= @volunteer.linkedin_url %></li>
+    <li>LinkedIn: <%= @volunteer.linkedin_url %></li>
   </ul>
 </div>
