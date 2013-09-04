@@ -8,5 +8,5 @@ class ApplicationController < ActionController::Base
       organization_url
     end
   end
-  
+
 end
