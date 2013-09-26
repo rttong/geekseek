@@ -1,14 +1,21 @@
 class VolunteersController < ApplicationController
+
   before_filter :authenticate_user!
   before_filter :find_volunteer
 
   layout "dashboard"
 
-  def show
-  end
 
   def new
   end
+
+  # def show
+  #   respond_to do |format| 
+  #     # format.html 
+  #     format.js { render partial: 'volunteer' }
+  #   end
+  # end
+
 
   def create
     @volunteer.attributes = params[:volunteer]
@@ -18,9 +25,6 @@ class VolunteersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
   end
 
   def update

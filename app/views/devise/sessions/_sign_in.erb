@@ -1,13 +1,11 @@
 <div id="sign_in_form">
-  <%= simple_form_for(User.new, :as => :user, :url => session_path(:user), remote: true ) do |f| %>
+  <%= simple_form_for(User.new, :as => :user, :url => session_path(:user) ) do |f| %>
   <div class="form-inputs">
-<<<<<<< HEAD
 
-=======
     <div class="hidden sign_in_error">
-      "Wrong email/password combination"
+      Wrong email/password combination
     </div>
->>>>>>> master
+
     <%= f.input :email, :required => false, :autofocus => true, :label => false, :placeholder => "e-mail address"%>
     <%= f.input :password, :required => false, :label => false, :placeholder => "password" %>
 
