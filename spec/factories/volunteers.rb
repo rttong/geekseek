@@ -9,6 +9,6 @@ FactoryGirl.define do
     f.location {Faker::Address.city}
     f.portfolio_links {Faker::Iternet.url}
     f.linkedin_url {Faker::Iternet.url}
-    user
+    f.association :user
   end
 end
