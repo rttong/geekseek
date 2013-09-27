@@ -1,7 +1,7 @@
 <div id="sign_in_form">
   <%= simple_form_for(User.new, :as => :user, :url => session_path(:user) ) do |f| %>
   <div class="form-inputs">
-    
+
     <div class="hidden sign_in_error">
       Wrong email/password combination
     </div>
