@@ -1,4 +1,4 @@
-FactoryGirl.define :project, class: Project do
+FactoryGirl.define do
 
   factory :project do 
     title "Project Title"
@@ -6,7 +6,7 @@ FactoryGirl.define :project, class: Project do
     target_date "Mon, 29 Jul 2014"
     importance "Because it is"
     state "active"
-    assocation :organization, factory: :organization
+    organization
   end
 
 end

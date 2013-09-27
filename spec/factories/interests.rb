@@ -1,3 +1,4 @@
+
 FactoryGirl.define, class: Interest do
   factory :interest do
     status  "Pending"
@@ -6,3 +7,4 @@ FactoryGirl.define, class: Interest do
     association :volunteer, factory: :volunteer
   end
 end
+
