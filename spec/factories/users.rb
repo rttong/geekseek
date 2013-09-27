@@ -1,9 +1,19 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :user do |f|
-    f.email 'test@gmail.com'
-    f.password "12345678"
-    f.password_confirmation "12345678"
+  
+  factory :user do 
+    email 'test@gmail.com'
+    password "12345678"
+    password_confirmation "12345678"
   end
+
+  factory :v_user do 
+    profile_type "volunteer"
+  end
+
+  factory :o_user do 
+    profile_type "organization"
+  end
+
 end
