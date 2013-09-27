@@ -7,7 +7,6 @@ FactoryGirl.define :project, class: Project do
     f.importance "Because it is"
     f.state "active"
     f.assocation :organization, factory: :organization
-    f.after_create { |f| [FactoryGirl(:interests)] }
   end
 
 end
