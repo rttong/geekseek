@@ -1,5 +1,5 @@
 
-FactoryGirl.define, class: Interest do
+FactoryGirl.define do
   factory :interest do
     status  "Pending"
     message  "Message"
